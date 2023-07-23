@@ -135,7 +135,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -274,10 +274,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -311,7 +311,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -378,7 +378,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -390,7 +390,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -435,7 +435,7 @@ fxgroup
                 movc r1.xyz, r2.wwww, r1.yzwy, r13.xyzx  // r1.x <- diffuse.x; r1.y <- diffuse.y; r1.z <- diffuse.z
                 movc r2.xyz, r2.wwww, r2.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r1.xyz, r1.xyzx  // r1.x <- D.x; r1.y <- D.y; r1.z <- D.z
                 mov r2.xyz, r2.xyzx  // r2.x <- S.x; r2.y <- S.y; r2.z <- S.z
@@ -553,7 +553,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -692,10 +692,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -729,7 +729,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -796,7 +796,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -808,7 +808,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -853,7 +853,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -879,7 +879,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -924,7 +924,7 @@ fxgroup
                 movc r2.xyz, r1.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r1.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -1042,7 +1042,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -1181,10 +1181,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -1218,7 +1218,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -1285,7 +1285,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -1297,7 +1297,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -1342,7 +1342,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -1368,7 +1368,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -1413,7 +1413,7 @@ fxgroup
                 movc r7.xyz, r1.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r1.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -1439,7 +1439,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -1484,7 +1484,7 @@ fxgroup
                 movc r2.xyz, r1.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r1.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -1602,7 +1602,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -1716,7 +1716,7 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 113 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 113 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 sample_indexable(texture2d)(float,float,float,float) r0.xyzw, v3.xyxx, t0.xyzw, s0  // r0.x <- texColor.x; r0.y <- texColor.y; r0.z <- texColor.z; r0.w <- texColor.w
                 
                 #line 128
@@ -1819,7 +1819,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -1963,10 +1963,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -2000,7 +2000,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -2067,7 +2067,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -2079,7 +2079,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -2124,7 +2124,7 @@ fxgroup
                 movc r1.xyz, r2.wwww, r1.yzwy, r13.xyzx  // r1.x <- diffuse.x; r1.y <- diffuse.y; r1.z <- diffuse.z
                 movc r2.xyz, r2.wwww, r2.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r1.xyz, r1.xyzx  // r1.x <- D.x; r1.y <- D.y; r1.z <- D.z
                 mov r2.xyz, r2.xyzx  // r2.x <- S.x; r2.y <- S.y; r2.z <- S.z
@@ -2242,7 +2242,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -2386,10 +2386,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -2423,7 +2423,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -2490,7 +2490,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -2502,7 +2502,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -2547,7 +2547,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -2573,7 +2573,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -2618,7 +2618,7 @@ fxgroup
                 movc r2.xyz, r1.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r1.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -2736,7 +2736,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -2880,10 +2880,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -2917,7 +2917,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -2984,7 +2984,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -2996,7 +2996,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -3041,7 +3041,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -3067,7 +3067,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -3112,7 +3112,7 @@ fxgroup
                 movc r7.xyz, r1.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r1.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -3138,7 +3138,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -3183,7 +3183,7 @@ fxgroup
                 movc r2.xyz, r1.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r1.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -3301,7 +3301,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -3415,7 +3415,7 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 113 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 113 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 sample_indexable(texture2d)(float,float,float,float) r0.xyzw, v3.xyxx, t0.xyzw, s0  // r0.x <- texColor.x; r0.y <- texColor.y; r0.z <- texColor.z; r0.w <- texColor.w
                 
                 #line 120
@@ -3525,7 +3525,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -3669,10 +3669,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -3713,7 +3713,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -3780,7 +3780,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -3792,7 +3792,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -3837,7 +3837,7 @@ fxgroup
                 movc r1.xyz, r2.wwww, r1.yzwy, r13.xyzx  // r1.x <- diffuse.x; r1.y <- diffuse.y; r1.z <- diffuse.z
                 movc r2.xyz, r2.wwww, r2.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r1.xyz, r1.xyzx  // r1.x <- D.x; r1.y <- D.y; r1.z <- D.z
                 mov r2.xyz, r2.xyzx  // r2.x <- S.x; r2.y <- S.y; r2.z <- S.z
@@ -3955,7 +3955,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -4099,10 +4099,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -4143,7 +4143,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -4210,7 +4210,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -4222,7 +4222,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -4267,7 +4267,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -4293,7 +4293,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -4338,7 +4338,7 @@ fxgroup
                 movc r2.xyz, r1.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r1.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -4456,7 +4456,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -4600,10 +4600,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -4644,7 +4644,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -4711,7 +4711,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -4723,7 +4723,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -4768,7 +4768,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -4794,7 +4794,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -4839,7 +4839,7 @@ fxgroup
                 movc r7.xyz, r1.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r1.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -4865,7 +4865,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -4910,7 +4910,7 @@ fxgroup
                 movc r2.xyz, r1.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r1.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -5028,7 +5028,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -5167,10 +5167,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -5204,7 +5204,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -5271,7 +5271,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -5283,7 +5283,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -5328,7 +5328,7 @@ fxgroup
                 movc r2.xyz, r4.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r4.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -5459,7 +5459,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -5598,10 +5598,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -5635,7 +5635,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -5702,7 +5702,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -5714,7 +5714,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -5759,7 +5759,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -5785,7 +5785,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -5830,7 +5830,7 @@ fxgroup
                 movc r2.xyz, r2.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r2.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -5961,7 +5961,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -6100,10 +6100,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -6137,7 +6137,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -6204,7 +6204,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -6216,7 +6216,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -6261,7 +6261,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -6287,7 +6287,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -6332,7 +6332,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -6358,7 +6358,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -6403,7 +6403,7 @@ fxgroup
                 movc r2.xyz, r2.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r2.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -6534,7 +6534,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -6671,7 +6671,7 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 100 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 100 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, -v1.xyzx
                 add r0.xyz, r0.xyzx, cb0[12].xyzx  // r0.x <- toEye.x; r0.y <- toEye.y; r0.z <- toEye.z
                 
@@ -6795,7 +6795,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -6939,10 +6939,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -6976,7 +6976,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -7043,7 +7043,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -7055,7 +7055,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -7100,7 +7100,7 @@ fxgroup
                 movc r2.xyz, r4.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r4.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -7231,7 +7231,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -7375,10 +7375,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -7412,7 +7412,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -7479,7 +7479,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -7491,7 +7491,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -7536,7 +7536,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -7562,7 +7562,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -7607,7 +7607,7 @@ fxgroup
                 movc r2.xyz, r2.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r2.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -7738,7 +7738,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -7882,10 +7882,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -7919,7 +7919,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -7986,7 +7986,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -7998,7 +7998,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -8043,7 +8043,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -8069,7 +8069,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -8114,7 +8114,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -8140,7 +8140,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -8185,7 +8185,7 @@ fxgroup
                 movc r2.xyz, r2.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r2.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -8316,7 +8316,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -8453,7 +8453,7 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 100 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 100 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, -v1.xyzx
                 add r0.xyz, r0.xyzx, cb0[12].xyzx  // r0.x <- toEye.x; r0.y <- toEye.y; r0.z <- toEye.z
                 
@@ -8584,7 +8584,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -8728,10 +8728,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -8772,7 +8772,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -8839,7 +8839,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -8851,7 +8851,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -8896,7 +8896,7 @@ fxgroup
                 movc r2.xyz, r4.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r4.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -9027,7 +9027,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -9171,10 +9171,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -9215,7 +9215,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -9282,7 +9282,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -9294,7 +9294,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -9339,7 +9339,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -9365,7 +9365,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -9410,7 +9410,7 @@ fxgroup
                 movc r2.xyz, r2.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r2.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -9541,7 +9541,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -9685,10 +9685,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -9729,7 +9729,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -9796,7 +9796,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -9808,7 +9808,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -9853,7 +9853,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -9879,7 +9879,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -9924,7 +9924,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -9950,7 +9950,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -9995,7 +9995,7 @@ fxgroup
                 movc r2.xyz, r2.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r2.wwww, r1.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -10126,7 +10126,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -10269,10 +10269,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -10306,7 +10306,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -10373,7 +10373,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -10385,7 +10385,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -10430,7 +10430,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -10566,7 +10566,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -10709,10 +10709,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -10746,7 +10746,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -10813,7 +10813,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -10825,7 +10825,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -10870,7 +10870,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -10896,7 +10896,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -10941,7 +10941,7 @@ fxgroup
                 movc r7.xyz, r1.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r1.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -11077,7 +11077,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -11220,10 +11220,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -11257,7 +11257,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -11324,7 +11324,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -11336,7 +11336,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -11381,7 +11381,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -11407,7 +11407,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -11452,7 +11452,7 @@ fxgroup
                 movc r7.xyz, r1.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r1.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -11478,7 +11478,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -11523,7 +11523,7 @@ fxgroup
                 movc r7.xyz, r1.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r1.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -11659,7 +11659,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -11773,7 +11773,7 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 113 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 113 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 sample_indexable(texture2d)(float,float,float,float) r0.xyzw, v3.xyxx, t0.xyzw, s0  // r0.x <- texColor.x; r0.y <- texColor.y; r0.z <- texColor.z; r0.w <- texColor.w
                 
                 #line 128
@@ -11876,7 +11876,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -12022,10 +12022,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -12059,7 +12059,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -12126,7 +12126,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -12138,7 +12138,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -12183,7 +12183,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -12319,7 +12319,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -12465,10 +12465,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -12502,7 +12502,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -12569,7 +12569,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -12581,7 +12581,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -12626,7 +12626,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -12652,7 +12652,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -12697,7 +12697,7 @@ fxgroup
                 movc r7.xyz, r1.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r1.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -12833,7 +12833,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -12979,10 +12979,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -13016,7 +13016,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -13083,7 +13083,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -13095,7 +13095,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -13140,7 +13140,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -13166,7 +13166,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -13211,7 +13211,7 @@ fxgroup
                 movc r7.xyz, r1.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r1.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -13237,7 +13237,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -13282,7 +13282,7 @@ fxgroup
                 movc r7.xyz, r1.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r1.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -13418,7 +13418,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -13532,7 +13532,7 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 113 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 113 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 sample_indexable(texture2d)(float,float,float,float) r0.xyzw, v3.xyxx, t0.xyzw, s0  // r0.x <- texColor.x; r0.y <- texColor.y; r0.z <- texColor.z; r0.w <- texColor.w
                 
                 #line 120
@@ -13642,7 +13642,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -13788,10 +13788,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -13832,7 +13832,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -13899,7 +13899,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -13911,7 +13911,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -13956,7 +13956,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -14092,7 +14092,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -14238,10 +14238,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -14282,7 +14282,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -14349,7 +14349,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -14361,7 +14361,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -14406,7 +14406,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -14432,7 +14432,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -14477,7 +14477,7 @@ fxgroup
                 movc r7.xyz, r1.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r1.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -14613,7 +14613,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -14759,10 +14759,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -14803,7 +14803,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -14870,7 +14870,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -14882,7 +14882,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -14927,7 +14927,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -14953,7 +14953,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -14998,7 +14998,7 @@ fxgroup
                 movc r7.xyz, r1.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r1.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -15024,7 +15024,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -15069,7 +15069,7 @@ fxgroup
                 movc r7.xyz, r1.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r1.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -15205,7 +15205,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -15348,10 +15348,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -15385,7 +15385,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -15452,7 +15452,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -15464,7 +15464,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -15509,7 +15509,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -15658,7 +15658,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -15801,10 +15801,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -15838,7 +15838,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -15905,7 +15905,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -15917,7 +15917,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -15962,7 +15962,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -15988,7 +15988,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -16033,7 +16033,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -16182,7 +16182,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -16325,10 +16325,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -16362,7 +16362,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -16429,7 +16429,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -16441,7 +16441,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -16486,7 +16486,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -16512,7 +16512,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -16557,7 +16557,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -16583,7 +16583,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -16628,7 +16628,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -16777,7 +16777,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -16914,7 +16914,7 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 100 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 100 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, -v1.xyzx
                 add r0.xyz, r0.xyzx, cb0[12].xyzx  // r0.x <- toEye.x; r0.y <- toEye.y; r0.z <- toEye.z
                 
@@ -17038,7 +17038,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -17184,10 +17184,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -17221,7 +17221,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -17288,7 +17288,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -17300,7 +17300,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -17345,7 +17345,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -17494,7 +17494,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -17640,10 +17640,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -17677,7 +17677,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -17744,7 +17744,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -17756,7 +17756,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -17801,7 +17801,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -17827,7 +17827,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -17872,7 +17872,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -18021,7 +18021,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -18167,10 +18167,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -18204,7 +18204,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -18271,7 +18271,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -18283,7 +18283,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -18328,7 +18328,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -18354,7 +18354,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -18399,7 +18399,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -18425,7 +18425,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -18470,7 +18470,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -18619,7 +18619,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -18756,7 +18756,7 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 100 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 100 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, -v1.xyzx
                 add r0.xyz, r0.xyzx, cb0[12].xyzx  // r0.x <- toEye.x; r0.y <- toEye.y; r0.z <- toEye.z
                 
@@ -18887,7 +18887,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -19033,10 +19033,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -19077,7 +19077,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -19144,7 +19144,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -19156,7 +19156,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -19201,7 +19201,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -19350,7 +19350,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -19496,10 +19496,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -19540,7 +19540,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -19607,7 +19607,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -19619,7 +19619,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -19664,7 +19664,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -19690,7 +19690,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -19735,7 +19735,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -19884,7 +19884,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 74 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 74 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -20030,10 +20030,10 @@ fxgroup
                 //   v4.x <- pin.ShadowPosH.x; v4.y <- pin.ShadowPosH.y; v4.z <- pin.ShadowPosH.z; v4.w <- pin.ShadowPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 97 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 97 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -20074,7 +20074,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -20141,7 +20141,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 nop 
                 mov r0.yzw, cb1[20].xxyz
                 mov r7.xyz, cb1[21].xyzx
@@ -20153,7 +20153,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -20198,7 +20198,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r0.yzw, r0.yyzw  // r0.y <- A.x; r0.z <- A.y; r0.w <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -20224,7 +20224,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -20269,7 +20269,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -20295,7 +20295,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -20340,7 +20340,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 147 "D:\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
+                #line 147 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 21 Shadow Mapping\Shadows\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
