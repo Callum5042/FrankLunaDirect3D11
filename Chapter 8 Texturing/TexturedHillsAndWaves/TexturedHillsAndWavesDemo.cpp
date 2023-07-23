@@ -157,11 +157,15 @@ bool TexturedHillsAndWavesApp::Init()
 	Effects::InitAll(md3dDevice);
 	InputLayouts::InitAll(md3dDevice);
 
-	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
+	ID3D11Resource* texResource = nullptr;
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/grass.dds", &texResource, &mGrassMapSRV));
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/water2.dds", &texResource, &mWavesMapSRV));
+
+	/*HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
 		L"Textures/grass.dds", 0, 0, &mGrassMapSRV, 0 ));
 
 	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
-		L"Textures/water2.dds", 0, 0, &mWavesMapSRV, 0 ));
+		L"Textures/water2.dds", 0, 0, &mWavesMapSRV, 0 ));*/
 
 	BuildLandGeometryBuffers();
 	BuildWaveGeometryBuffers();
