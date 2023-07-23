@@ -77,7 +77,7 @@ fxgroup
                 //   o1.x <- <VS return value>.AmbientOcc; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 31 "D:\DirectX\FrankLuna\Source\Chapter 22 Ambient Occlusion\AmbientOcclusion\FX\AmbientOcclusion.fx"
+                #line 31 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 22 Ambient Occlusion\AmbientOcclusion\FX\AmbientOcclusion.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosH.x
@@ -126,7 +126,7 @@ fxgroup
                 //   v1.x <- pin.AmbientOcc; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 41 "D:\DirectX\FrankLuna\Source\Chapter 22 Ambient Occlusion\AmbientOcclusion\FX\AmbientOcclusion.fx"
+                #line 41 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 22 Ambient Occlusion\AmbientOcclusion\FX\AmbientOcclusion.fx"
                 mov o0.xyz, v1.xxxx
                 mov o0.w, l(1.000000)
                 ret 
