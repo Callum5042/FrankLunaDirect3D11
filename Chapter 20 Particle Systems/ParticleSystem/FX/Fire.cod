@@ -174,7 +174,7 @@ GeometryShader gsStreamOut =
         //   v[0][2].x <- gin[0].SizeW.x; v[0][2].y <- gin[0].SizeW.y; v[0][2].z <- gin[0].Age; 
         //   v[0][3].x <- gin[0].Type
         //
-        #line 124 "D:\DirectX\FrankLuna\Source\Chapter 20 Particle Systems\ParticleSystem\FX\Fire.fx"
+        #line 124 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 20 Particle Systems\ParticleSystem\FX\Fire.fx"
         add r0.x, cb0[3].x, v[0][2].z  // r0.x <- gin[0].Age
         
         #line 126
@@ -335,7 +335,7 @@ fxgroup
                 //   o1.x <- <StreamOutVS return value>.InitialVelW.x; o1.y <- <StreamOutVS return value>.InitialVelW.y; o1.z <- <StreamOutVS return value>.InitialVelW.z; 
                 //   o0.x <- <StreamOutVS return value>.InitialPosW.x; o0.y <- <StreamOutVS return value>.InitialPosW.y; o0.z <- <StreamOutVS return value>.InitialPosW.z
                 //
-                #line 112 "D:\DirectX\FrankLuna\Source\Chapter 20 Particle Systems\ParticleSystem\FX\Fire.fx"
+                #line 112 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 20 Particle Systems\ParticleSystem\FX\Fire.fx"
                 mov o0.xyz, v0.xyzx
                 mov o1.xyz, v1.xyzx
                 mov o2.xy, v2.xyxx
@@ -431,7 +431,7 @@ fxgroup
                 //   o1.x <- <DrawVS return value>.SizeW.x; o1.y <- <DrawVS return value>.SizeW.y; 
                 //   o0.x <- <DrawVS return value>.PosW.x; o0.y <- <DrawVS return value>.PosW.y; o0.z <- <DrawVS return value>.PosW.z
                 //
-                #line 194 "D:\DirectX\FrankLuna\Source\Chapter 20 Particle Systems\ParticleSystem\FX\Fire.fx"
+                #line 194 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 20 Particle Systems\ParticleSystem\FX\Fire.fx"
                 mov r0.x, v3.x  // r0.x <- t
                 
                 #line 197
@@ -563,7 +563,7 @@ fxgroup
                 //   v[0][3].x <- gin[0].Type; 
                 //   x0 <- v
                 //
-                #line 222 "D:\DirectX\FrankLuna\Source\Chapter 20 Particle Systems\ParticleSystem\FX\Fire.fx"
+                #line 222 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 20 Particle Systems\ParticleSystem\FX\Fire.fx"
                 if_nz v[0][3].x
                 
                 #line 227
@@ -759,7 +759,7 @@ fxgroup
                 //   v2.x <- pin.Tex.x; v2.y <- pin.Tex.y; 
                 //   o0.x <- <DrawPS return value>.x; o0.y <- <DrawPS return value>.y; o0.z <- <DrawPS return value>.z; o0.w <- <DrawPS return value>.w
                 //
-                #line 261 "D:\DirectX\FrankLuna\Source\Chapter 20 Particle Systems\ParticleSystem\FX\Fire.fx"
+                #line 261 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 20 Particle Systems\ParticleSystem\FX\Fire.fx"
                 itof r0.z, l(0)
                 mov r0.xy, v2.xyxx
                 sample_indexable(texture2darray)(float,float,float,float) r0.xyzw, r0.xyzx, t0.xyzw, s0
