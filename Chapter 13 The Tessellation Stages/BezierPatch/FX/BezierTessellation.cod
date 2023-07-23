@@ -74,7 +74,7 @@ fxgroup
                 //   v0.x <- vin.PosL.x; v0.y <- vin.PosL.y; v0.z <- vin.PosL.z; 
                 //   o0.x <- <VS return value>.PosL.x; o0.y <- <VS return value>.PosL.y; o0.z <- <VS return value>.PosL.z
                 //
-                #line 51 "D:\DirectX\FrankLuna\Source\Chapter 13 The Tessellation Stages\BezierPatch\FX\BezierTessellation.fx"
+                #line 51 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 13 The Tessellation Stages\BezierPatch\FX\BezierTessellation.fx"
                 mov r0.xyz, v0.xyzx  // r0.x <- vout.PosL.x; r0.y <- vout.PosL.y; r0.z <- vout.PosL.z
                 
                 #line 53
@@ -158,7 +158,7 @@ fxgroup
                 //   v[14][0].x <- p[14].PosL.x; v[14][0].y <- p[14].PosL.y; v[14][0].z <- p[14].PosL.z; 
                 //   v[15][0].x <- p[15].PosL.x; v[15][0].y <- p[15].PosL.y; v[15][0].z <- p[15].PosL.z
                 //
-                #line 98 "D:\DirectX\FrankLuna\Source\Chapter 13 The Tessellation Stages\BezierPatch\FX\BezierTessellation.fx"
+                #line 98 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 13 The Tessellation Stages\BezierPatch\FX\BezierTessellation.fx"
                 mov r0.x, vOutputControlPointID
                 mov r0.xyz, v[r0.x + 0][0].xyzx  // r0.x <- hout.PosL.x; r0.y <- hout.PosL.y; r0.z <- hout.PosL.z
                 
@@ -311,7 +311,7 @@ fxgroup
                 //   vicp[14][0].x <- bezPatch[14].PosL.x; vicp[14][0].y <- bezPatch[14].PosL.y; vicp[14][0].z <- bezPatch[14].PosL.z; 
                 //   vicp[15][0].x <- bezPatch[15].PosL.x; vicp[15][0].y <- bezPatch[15].PosL.y; vicp[15][0].z <- bezPatch[15].PosL.z
                 //
-                #line 148 "D:\DirectX\FrankLuna\Source\Chapter 13 The Tessellation Stages\BezierPatch\FX\BezierTessellation.fx"
+                #line 148 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 13 The Tessellation Stages\BezierPatch\FX\BezierTessellation.fx"
                 nop 
                 mov r0.x, vDomain.x
                 
@@ -451,7 +451,7 @@ fxgroup
                 //   v0.x <- pin.PosH.x; v0.y <- pin.PosH.y; v0.z <- pin.PosH.z; v0.w <- pin.PosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 160 "D:\DirectX\FrankLuna\Source\Chapter 13 The Tessellation Stages\BezierPatch\FX\BezierTessellation.fx"
+                #line 160 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 13 The Tessellation Stages\BezierPatch\FX\BezierTessellation.fx"
                 mov o0.xyzw, l(1.000000,1.000000,1.000000,1.000000)
                 ret 
                 // Approximately 2 instruction slots used
