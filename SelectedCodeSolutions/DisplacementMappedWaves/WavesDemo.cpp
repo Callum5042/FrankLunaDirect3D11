@@ -237,7 +237,15 @@ bool WavesApp::Init()
 
 	mSky = new Sky(md3dDevice, L"Textures/snowcube1024.dds", 5000.0f);
 
-	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
+	ID3D11Resource* texResource = nullptr;
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/floor.dds", &texResource, &mStoneTexSRV));
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/bricks.dds", &texResource, &mBrickTexSRV));
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/floor_nmap.dds", &texResource, &mStoneNormalTexSRV));
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/bricks_nmap.dds", &texResource, &mBrickNormalTexSRV));
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/waves0.dds", &texResource, &mWavesNormalTexSRV0));
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/waves1.dds", &texResource, &mWavesNormalTexSRV1));
+
+	/*HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
 		L"Textures/floor.dds", 0, 0, &mStoneTexSRV, 0 ));
 
 	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
@@ -253,7 +261,7 @@ bool WavesApp::Init()
 		L"Textures/waves0.dds", 0, 0, &mWavesNormalTexSRV0, 0 ));
 
 	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
-		L"Textures/waves1.dds", 0, 0, &mWavesNormalTexSRV1, 0 ));
+		L"Textures/waves1.dds", 0, 0, &mWavesNormalTexSRV1, 0 ));*/
 
 	BuildShapeGeometryBuffers();
 	BuildSkullGeometryBuffers();

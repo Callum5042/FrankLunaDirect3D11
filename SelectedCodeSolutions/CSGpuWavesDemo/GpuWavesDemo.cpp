@@ -23,6 +23,7 @@
 #include "Vertex.h"
 #include "RenderStates.h"
 #include "GpuWaves.h"
+#include <DDSTextureLoader.h>
 
 enum RenderOptions
 {
@@ -199,14 +200,19 @@ bool GpuWavesApp::Init()
 	InputLayouts::InitAll(md3dDevice);
 	RenderStates::InitAll(md3dDevice);
 
-	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
+	ID3D11Resource* texResource = nullptr;
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/grass.dds", &texResource, &mGrassMapSRV));
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/water2.dds", &texResource, &mWavesMapSRV));
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/WireFence.dds", &texResource, &mCrateSRV));
+
+	/*HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
 		L"Textures/grass.dds", 0, 0, &mGrassMapSRV, 0 ));
 
 	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
 		L"Textures/water2.dds", 0, 0, &mWavesMapSRV, 0 ));
 
 	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
-		L"Textures/WireFence.dds", 0, 0, &mCrateSRV, 0 ));
+		L"Textures/WireFence.dds", 0, 0, &mCrateSRV, 0 ));*/
 
 	mWaves.Init(md3dDevice, 512, 512, 0.5f, 0.03f, 4.0f, 0.2f);
 

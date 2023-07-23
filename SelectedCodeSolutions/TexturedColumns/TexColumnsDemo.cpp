@@ -202,14 +202,19 @@ bool TexColumnApp::Init()
 	Effects::InitAll(md3dDevice);
 	InputLayouts::InitAll(md3dDevice);
 
-	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
+	ID3D11Resource* texResource = nullptr;
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/floor.dds", &texResource, &mFloorTexSRV));
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/stone.dds", &texResource, &mStoneTexSRV));
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/bricks.dds", &texResource, &mBrickTexSRV));
+
+	/*HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
 		L"Textures/floor.dds", 0, 0, &mFloorTexSRV, 0 ));
 
 	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
 		L"Textures/stone.dds", 0, 0, &mStoneTexSRV, 0 ));
 
 	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
-		L"Textures/bricks.dds", 0, 0, &mBrickTexSRV, 0 ));
+		L"Textures/bricks.dds", 0, 0, &mBrickTexSRV, 0 ));*/
 
 	BuildShapeGeometryBuffers();
 	BuildSkullGeometryBuffers();

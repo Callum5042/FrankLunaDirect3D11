@@ -150,8 +150,11 @@ bool SubdivisionApp::Init()
 	InputLayouts::InitAll(md3dDevice);
 	RenderStates::InitAll(md3dDevice);
 
-	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
-		L"Textures/WireFence.dds", 0, 0, &mSphereMapSRV, 0 ));
+	/*HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
+		L"Textures/WireFence.dds", 0, 0, &mSphereMapSRV, 0 ));*/
+
+	ID3D11Resource* texResource = nullptr;
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/WireFence.dds", &texResource, &mSphereMapSRV));
 
 	BuildGeometryBuffers();
 

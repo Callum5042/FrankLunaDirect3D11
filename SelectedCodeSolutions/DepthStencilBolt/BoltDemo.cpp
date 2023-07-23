@@ -23,6 +23,7 @@
 #include "Vertex.h"
 #include "RenderStates.h"
 #include "Waves.h"
+#include <DDSTextureLoader.h>
 
 enum RenderOptions
 {
@@ -201,11 +202,13 @@ bool BlendApp::Init()
 	InputLayouts::InitAll(md3dDevice);
 	RenderStates::InitAll(md3dDevice);
 
-	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
+
+
+	/*HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
 		L"Textures/grass.dds", 0, 0, &mGrassMapSRV, 0 ));
 
 	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
-		L"Textures/water2.dds", 0, 0, &mWavesMapSRV, 0 ));
+		L"Textures/water2.dds", 0, 0, &mWavesMapSRV, 0 ));*/
 
 	for(int i = 0; i < 60; ++i)
 	{
@@ -222,8 +225,11 @@ bool BlendApp::Init()
 		filename += frameNum.str();
 		filename += L".bmp";
 
-		HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
-			filename.c_str(), 0, 0, &mBoltMapSRV[i], 0 ));
+		/*HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
+			filename.c_str(), 0, 0, &mBoltMapSRV[i], 0 ));*/
+
+		ID3D11Resource* texResource = nullptr;
+		HR(DirectX::CreateDDSTextureFromFile(md3dDevice, filename.c_str(), &texResource, &mBoltMapSRV[i]));
 	}
 
 	BuildLandGeometryBuffers();
