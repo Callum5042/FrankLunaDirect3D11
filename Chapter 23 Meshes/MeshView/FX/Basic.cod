@@ -141,7 +141,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -295,10 +295,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -332,7 +332,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -399,7 +399,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -418,7 +418,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -463,7 +463,7 @@ fxgroup
                 movc r1.xyz, r0.wwww, r1.yzwy, r14.xyzx  // r1.x <- diffuse.x; r1.y <- diffuse.y; r1.z <- diffuse.z
                 movc r2.xyz, r0.wwww, r2.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r1.xyz, r1.xyzx  // r1.x <- D.x; r1.y <- D.y; r1.z <- D.z
                 mov r2.xyz, r2.xyzx  // r2.x <- S.x; r2.y <- S.y; r2.z <- S.z
@@ -586,7 +586,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -740,10 +740,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -777,7 +777,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -844,7 +844,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -863,7 +863,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -908,7 +908,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -935,7 +935,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -980,7 +980,7 @@ fxgroup
                 movc r1.xyz, r2.wwww, r1.yzwy, r13.xyzx  // r1.x <- diffuse.x; r1.y <- diffuse.y; r1.z <- diffuse.z
                 movc r2.xyz, r2.wwww, r2.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r1.xyz, r1.xyzx  // r1.x <- D.x; r1.y <- D.y; r1.z <- D.z
                 mov r2.xyz, r2.xyzx  // r2.x <- S.x; r2.y <- S.y; r2.z <- S.z
@@ -1103,7 +1103,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -1257,10 +1257,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -1294,7 +1294,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -1361,7 +1361,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -1380,7 +1380,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -1425,7 +1425,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -1452,7 +1452,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -1497,7 +1497,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -1524,7 +1524,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -1569,7 +1569,7 @@ fxgroup
                 movc r1.xyz, r2.wwww, r1.yzwy, r13.xyzx  // r1.x <- diffuse.x; r1.y <- diffuse.y; r1.z <- diffuse.z
                 movc r2.xyz, r2.wwww, r2.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r1.xyz, r1.xyzx  // r1.x <- D.x; r1.y <- D.y; r1.z <- D.z
                 mov r2.xyz, r2.xyzx  // r2.x <- S.x; r2.y <- S.y; r2.z <- S.z
@@ -1692,7 +1692,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -1816,7 +1816,7 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 118 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 118 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 sample_indexable(texture2d)(float,float,float,float) r0.xyzw, v3.xyxx, t0.xyzw, s0  // r0.x <- texColor.x; r0.y <- texColor.y; r0.z <- texColor.z; r0.w <- texColor.w
                 
                 #line 133
@@ -1923,7 +1923,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -2080,10 +2080,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -2117,7 +2117,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -2184,7 +2184,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -2203,7 +2203,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -2248,7 +2248,7 @@ fxgroup
                 movc r1.xyz, r0.wwww, r1.yzwy, r14.xyzx  // r1.x <- diffuse.x; r1.y <- diffuse.y; r1.z <- diffuse.z
                 movc r2.xyz, r0.wwww, r2.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r1.xyz, r1.xyzx  // r1.x <- D.x; r1.y <- D.y; r1.z <- D.z
                 mov r2.xyz, r2.xyzx  // r2.x <- S.x; r2.y <- S.y; r2.z <- S.z
@@ -2371,7 +2371,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -2528,10 +2528,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -2565,7 +2565,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -2632,7 +2632,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -2651,7 +2651,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -2696,7 +2696,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -2723,7 +2723,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -2768,7 +2768,7 @@ fxgroup
                 movc r1.xyz, r2.wwww, r1.yzwy, r13.xyzx  // r1.x <- diffuse.x; r1.y <- diffuse.y; r1.z <- diffuse.z
                 movc r2.xyz, r2.wwww, r2.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r1.xyz, r1.xyzx  // r1.x <- D.x; r1.y <- D.y; r1.z <- D.z
                 mov r2.xyz, r2.xyzx  // r2.x <- S.x; r2.y <- S.y; r2.z <- S.z
@@ -2891,7 +2891,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -3048,10 +3048,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -3085,7 +3085,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -3152,7 +3152,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -3171,7 +3171,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -3216,7 +3216,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -3243,7 +3243,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -3288,7 +3288,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -3315,7 +3315,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -3360,7 +3360,7 @@ fxgroup
                 movc r1.xyz, r2.wwww, r1.yzwy, r13.xyzx  // r1.x <- diffuse.x; r1.y <- diffuse.y; r1.z <- diffuse.z
                 movc r2.xyz, r2.wwww, r2.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r1.xyz, r1.xyzx  // r1.x <- D.x; r1.y <- D.y; r1.z <- D.z
                 mov r2.xyz, r2.xyzx  // r2.x <- S.x; r2.y <- S.y; r2.z <- S.z
@@ -3483,7 +3483,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -3607,7 +3607,7 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 118 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 118 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 sample_indexable(texture2d)(float,float,float,float) r0.xyzw, v3.xyxx, t0.xyzw, s0  // r0.x <- texColor.x; r0.y <- texColor.y; r0.z <- texColor.z; r0.w <- texColor.w
                 
                 #line 125
@@ -3721,7 +3721,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -3878,10 +3878,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -3922,7 +3922,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -3989,7 +3989,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -4008,7 +4008,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -4053,7 +4053,7 @@ fxgroup
                 movc r1.xyz, r0.wwww, r1.yzwy, r14.xyzx  // r1.x <- diffuse.x; r1.y <- diffuse.y; r1.z <- diffuse.z
                 movc r2.xyz, r0.wwww, r2.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r1.xyz, r1.xyzx  // r1.x <- D.x; r1.y <- D.y; r1.z <- D.z
                 mov r2.xyz, r2.xyzx  // r2.x <- S.x; r2.y <- S.y; r2.z <- S.z
@@ -4176,7 +4176,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -4333,10 +4333,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -4377,7 +4377,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -4444,7 +4444,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -4463,7 +4463,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -4508,7 +4508,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -4535,7 +4535,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -4580,7 +4580,7 @@ fxgroup
                 movc r1.xyz, r2.wwww, r1.yzwy, r13.xyzx  // r1.x <- diffuse.x; r1.y <- diffuse.y; r1.z <- diffuse.z
                 movc r2.xyz, r2.wwww, r2.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r1.xyz, r1.xyzx  // r1.x <- D.x; r1.y <- D.y; r1.z <- D.z
                 mov r2.xyz, r2.xyzx  // r2.x <- S.x; r2.y <- S.y; r2.z <- S.z
@@ -4703,7 +4703,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -4860,10 +4860,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -4904,7 +4904,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -4971,7 +4971,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -4990,7 +4990,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -5035,7 +5035,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -5062,7 +5062,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -5107,7 +5107,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -5134,7 +5134,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -5179,7 +5179,7 @@ fxgroup
                 movc r1.xyz, r2.wwww, r1.yzwy, r13.xyzx  // r1.x <- diffuse.x; r1.y <- diffuse.y; r1.z <- diffuse.z
                 movc r2.xyz, r2.wwww, r2.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r1.xyz, r1.xyzx  // r1.x <- D.x; r1.y <- D.y; r1.z <- D.z
                 mov r2.xyz, r2.xyzx  // r2.x <- S.x; r2.y <- S.y; r2.z <- S.z
@@ -5302,7 +5302,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -5456,10 +5456,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -5493,7 +5493,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -5560,7 +5560,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -5579,7 +5579,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -5624,7 +5624,7 @@ fxgroup
                 movc r2.xyz, r0.wwww, r2.xyzx, r14.xyzx
                 movc r1.xyz, r0.wwww, r1.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -5760,7 +5760,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -5914,10 +5914,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -5951,7 +5951,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -6018,7 +6018,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -6037,7 +6037,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -6082,7 +6082,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -6109,7 +6109,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -6154,7 +6154,7 @@ fxgroup
                 movc r2.xyz, r4.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r4.wwww, r1.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -6290,7 +6290,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -6444,10 +6444,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -6481,7 +6481,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -6548,7 +6548,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -6567,7 +6567,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -6612,7 +6612,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -6639,7 +6639,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -6684,7 +6684,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -6711,7 +6711,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -6756,7 +6756,7 @@ fxgroup
                 movc r2.xyz, r4.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r4.wwww, r1.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -6892,7 +6892,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -7039,7 +7039,7 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 105 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 105 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, -v1.xyzx
                 add r0.xyz, r0.xyzx, cb0[12].xyzx  // r0.x <- toEye.x; r0.y <- toEye.y; r0.z <- toEye.z
                 
@@ -7167,7 +7167,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -7324,10 +7324,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -7361,7 +7361,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -7428,7 +7428,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -7447,7 +7447,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -7492,7 +7492,7 @@ fxgroup
                 movc r2.xyz, r0.wwww, r2.xyzx, r14.xyzx
                 movc r1.xyz, r0.wwww, r1.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -7628,7 +7628,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -7785,10 +7785,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -7822,7 +7822,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -7889,7 +7889,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -7908,7 +7908,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -7953,7 +7953,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -7980,7 +7980,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -8025,7 +8025,7 @@ fxgroup
                 movc r2.xyz, r4.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r4.wwww, r1.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -8161,7 +8161,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -8318,10 +8318,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -8355,7 +8355,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -8422,7 +8422,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -8441,7 +8441,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -8486,7 +8486,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -8513,7 +8513,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -8558,7 +8558,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -8585,7 +8585,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -8630,7 +8630,7 @@ fxgroup
                 movc r2.xyz, r4.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r4.wwww, r1.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -8766,7 +8766,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -8913,7 +8913,7 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 105 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 105 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, -v1.xyzx
                 add r0.xyz, r0.xyzx, cb0[12].xyzx  // r0.x <- toEye.x; r0.y <- toEye.y; r0.z <- toEye.z
                 
@@ -9048,7 +9048,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -9205,10 +9205,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -9249,7 +9249,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -9316,7 +9316,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -9335,7 +9335,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -9380,7 +9380,7 @@ fxgroup
                 movc r2.xyz, r0.wwww, r2.xyzx, r14.xyzx
                 movc r1.xyz, r0.wwww, r1.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -9516,7 +9516,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -9673,10 +9673,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -9717,7 +9717,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -9784,7 +9784,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -9803,7 +9803,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -9848,7 +9848,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -9875,7 +9875,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -9920,7 +9920,7 @@ fxgroup
                 movc r2.xyz, r4.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r4.wwww, r1.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -10056,7 +10056,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -10213,10 +10213,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -10257,7 +10257,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -10324,7 +10324,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -10343,7 +10343,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -10388,7 +10388,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -10415,7 +10415,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -10460,7 +10460,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -10487,7 +10487,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -10532,7 +10532,7 @@ fxgroup
                 movc r2.xyz, r4.wwww, r2.xyzx, r13.xyzx
                 movc r1.xyz, r4.wwww, r1.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r2.xyz, r2.xyzx  // r2.x <- D.x; r2.y <- D.y; r2.z <- D.z
                 mov r1.xyz, r1.xyzx  // r1.x <- S.x; r1.y <- S.y; r1.z <- S.z
@@ -10668,7 +10668,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -10824,10 +10824,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -10861,7 +10861,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -10928,7 +10928,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -10947,7 +10947,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -10992,7 +10992,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -11133,7 +11133,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -11289,10 +11289,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -11326,7 +11326,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -11393,7 +11393,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -11412,7 +11412,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -11457,7 +11457,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -11484,7 +11484,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -11529,7 +11529,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -11670,7 +11670,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -11826,10 +11826,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -11863,7 +11863,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -11930,7 +11930,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -11949,7 +11949,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -11994,7 +11994,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -12021,7 +12021,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -12066,7 +12066,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -12093,7 +12093,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -12138,7 +12138,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -12279,7 +12279,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -12403,7 +12403,7 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 118 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 118 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 sample_indexable(texture2d)(float,float,float,float) r0.xyzw, v3.xyxx, t0.xyzw, s0  // r0.x <- texColor.x; r0.y <- texColor.y; r0.z <- texColor.z; r0.w <- texColor.w
                 
                 #line 133
@@ -12510,7 +12510,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -12669,10 +12669,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -12706,7 +12706,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -12773,7 +12773,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -12792,7 +12792,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -12837,7 +12837,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -12978,7 +12978,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -13137,10 +13137,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -13174,7 +13174,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -13241,7 +13241,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -13260,7 +13260,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -13305,7 +13305,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -13332,7 +13332,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -13377,7 +13377,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -13518,7 +13518,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -13677,10 +13677,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -13714,7 +13714,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -13781,7 +13781,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -13800,7 +13800,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -13845,7 +13845,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -13872,7 +13872,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -13917,7 +13917,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -13944,7 +13944,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -13989,7 +13989,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -14130,7 +14130,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -14254,7 +14254,7 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 118 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 118 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 sample_indexable(texture2d)(float,float,float,float) r0.xyzw, v3.xyxx, t0.xyzw, s0  // r0.x <- texColor.x; r0.y <- texColor.y; r0.z <- texColor.z; r0.w <- texColor.w
                 
                 #line 125
@@ -14368,7 +14368,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -14527,10 +14527,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -14571,7 +14571,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -14638,7 +14638,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -14657,7 +14657,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -14702,7 +14702,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -14843,7 +14843,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -15002,10 +15002,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -15046,7 +15046,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -15113,7 +15113,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -15132,7 +15132,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -15177,7 +15177,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -15204,7 +15204,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -15249,7 +15249,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -15390,7 +15390,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -15549,10 +15549,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -15593,7 +15593,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -15660,7 +15660,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -15679,7 +15679,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -15724,7 +15724,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -15751,7 +15751,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -15796,7 +15796,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -15823,7 +15823,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -15868,7 +15868,7 @@ fxgroup
                 movc r7.xyz, r2.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r2.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -16009,7 +16009,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -16165,10 +16165,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -16202,7 +16202,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -16269,7 +16269,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -16288,7 +16288,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -16333,7 +16333,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -16487,7 +16487,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -16643,10 +16643,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -16680,7 +16680,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -16747,7 +16747,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -16766,7 +16766,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -16811,7 +16811,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -16838,7 +16838,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -16883,7 +16883,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -17037,7 +17037,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -17193,10 +17193,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -17230,7 +17230,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -17297,7 +17297,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -17316,7 +17316,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -17361,7 +17361,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -17388,7 +17388,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -17433,7 +17433,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -17460,7 +17460,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -17505,7 +17505,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -17659,7 +17659,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -17806,7 +17806,7 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 105 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 105 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, -v1.xyzx
                 add r0.xyz, r0.xyzx, cb0[12].xyzx  // r0.x <- toEye.x; r0.y <- toEye.y; r0.z <- toEye.z
                 
@@ -17934,7 +17934,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -18093,10 +18093,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -18130,7 +18130,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -18197,7 +18197,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -18216,7 +18216,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -18261,7 +18261,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -18415,7 +18415,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -18574,10 +18574,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -18611,7 +18611,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -18678,7 +18678,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -18697,7 +18697,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -18742,7 +18742,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -18769,7 +18769,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -18814,7 +18814,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -18968,7 +18968,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -19127,10 +19127,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -19164,7 +19164,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -19231,7 +19231,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -19250,7 +19250,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -19295,7 +19295,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -19322,7 +19322,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -19367,7 +19367,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -19394,7 +19394,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -19439,7 +19439,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -19593,7 +19593,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -19740,7 +19740,7 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 105 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 105 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, -v1.xyzx
                 add r0.xyz, r0.xyzx, cb0[12].xyzx  // r0.x <- toEye.x; r0.y <- toEye.y; r0.z <- toEye.z
                 
@@ -19875,7 +19875,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -20034,10 +20034,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -20078,7 +20078,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -20145,7 +20145,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -20164,7 +20164,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -20209,7 +20209,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -20363,7 +20363,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -20522,10 +20522,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -20566,7 +20566,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -20633,7 +20633,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -20652,7 +20652,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -20697,7 +20697,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -20724,7 +20724,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -20769,7 +20769,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -20923,7 +20923,7 @@ fxgroup
                 //   o1.x <- <VS return value>.PosW.x; o1.y <- <VS return value>.PosW.y; o1.z <- <VS return value>.PosW.z; 
                 //   o0.x <- <VS return value>.PosH.x; o0.y <- <VS return value>.PosH.y; o0.z <- <VS return value>.PosH.z; o0.w <- <VS return value>.PosH.w
                 //
-                #line 76 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 76 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r0.xyz, v0.xyzx
                 mov r0.w, l(1.000000)
                 dp4 r1.x, r0.xyzw, cb0[0].xyzw  // r1.x <- vout.PosW.x
@@ -21082,10 +21082,10 @@ fxgroup
                 //   v5.x <- pin.SsaoPosH.x; v5.y <- pin.SsaoPosH.y; v5.z <- pin.SsaoPosH.z; v5.w <- pin.SsaoPosH.w; 
                 //   o0.x <- <PS return value>.x; o0.y <- <PS return value>.y; o0.z <- <PS return value>.z; o0.w <- <PS return value>.w
                 //
-                #line 226 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 226 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r0.x, l(0.000488)  // r0.x <- SMAP_DX
                 
-                #line 102 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 102 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 dp3 r1.x, v2.xyzx, v2.xyzx
                 rsq r1.x, r1.x
                 mul r1.xyz, r1.xxxx, v2.xyzx  // r1.x <- pin.NormalW.x; r1.y <- pin.NormalW.y; r1.z <- pin.NormalW.z
@@ -21126,7 +21126,7 @@ fxgroup
                 nop 
                 mov r7.xyzw, v4.xyzw
                 
-                #line 233 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 233 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 div r7.xyz, r7.zxyz, r7.wwww  // r7.x <- shadowPosH.z; r7.y <- shadowPosH.x; r7.z <- shadowPosH.y
                 
                 #line 236
@@ -21193,7 +21193,7 @@ fxgroup
                 #line 256
                 div r0.x, r0.x, l(9.000000)
                 
-                #line 146 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 146 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 div r0.yz, v5.xxyx, v5.wwww  // r0.y <- pin.SsaoPosH.x; r0.z <- pin.SsaoPosH.y
                 
                 #line 147
@@ -21212,7 +21212,7 @@ fxgroup
                 mov r1.xyz, r1.xyzx
                 mov r2.xyz, r2.xyzx
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r14.xyz, l(0,0,0,0)  // r14.x <- diffuse.x; r14.y <- diffuse.y; r14.z <- diffuse.z
                 
                 #line 67
@@ -21257,7 +21257,7 @@ fxgroup
                 movc r8.xyz, r0.wwww, r8.xyzx, r14.xyzx
                 movc r9.xyz, r0.wwww, r9.xyzx, r15.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r7.xyz, r7.xyzx  // r7.x <- A.x; r7.y <- A.y; r7.z <- A.z
                 mov r8.xyz, r8.xyzx  // r8.x <- D.x; r8.y <- D.y; r8.z <- D.z
                 mov r9.xyz, r9.xyzx  // r9.x <- S.x; r9.y <- S.y; r9.z <- S.z
@@ -21284,7 +21284,7 @@ fxgroup
                 mov r11.xyz, cb0[6].xyzx  // r11.x <- L.Specular.x; r11.y <- L.Specular.y; r11.z <- L.Specular.z
                 mov r12.xyz, cb0[7].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -21329,7 +21329,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
@@ -21356,7 +21356,7 @@ fxgroup
                 mov r11.xyz, cb0[10].xyzx
                 mov r12.xyz, cb0[11].xyzx  // r12.x <- L.Direction.x; r12.y <- L.Direction.y; r12.z <- L.Direction.z
                 
-                #line 66 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
+                #line 66 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\LightHelper.fx"
                 mov r13.xyz, l(0,0,0,0)  // r13.x <- diffuse.x; r13.y <- diffuse.y; r13.z <- diffuse.z
                 
                 #line 67
@@ -21401,7 +21401,7 @@ fxgroup
                 movc r7.xyz, r4.wwww, r7.xyzx, r13.xyzx
                 movc r8.xyz, r4.wwww, r8.xyzx, r14.xyzx
                 
-                #line 154 "D:\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
+                #line 154 "D:\Sources\Testing\DirectX\FrankLuna\Source\Chapter 23 Meshes\MeshView\FX\Basic.fx"
                 mov r6.xyz, r6.xyzx  // r6.x <- A.x; r6.y <- A.y; r6.z <- A.z
                 mov r7.xyz, r7.xyzx  // r7.x <- D.x; r7.y <- D.y; r7.z <- D.z
                 mov r8.xyz, r8.xyzx  // r8.x <- S.x; r8.y <- S.y; r8.z <- S.z
