@@ -32,9 +32,13 @@
 using namespace DirectX;
 using namespace PackedVector;
 
-struct Vertex
+struct VertexPosition
 {
 	XMFLOAT3 Pos;
+};
+
+struct VertexColor
+{
 	XMFLOAT4 Color;
 };
 
@@ -59,7 +63,8 @@ private:
 	void BuildVertexLayout();
 
 private:
-	ID3D11Buffer* mBoxVB;
+	ID3D11Buffer* mBoxPositionVB;
+	ID3D11Buffer* mBoxColourVB;
 	ID3D11Buffer* mBoxIB;
 
 	ID3DX11Effect* mFX;
@@ -97,11 +102,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
  
 
 BoxApp::BoxApp(HINSTANCE hInstance)
-: D3DApp(hInstance), mBoxVB(0), mBoxIB(0), mFX(0), mTech(0),
+: D3DApp(hInstance), mBoxPositionVB(0), mBoxIB(0), mFX(0), mTech(0),
   mfxWorldViewProj(0), mInputLayout(0), 
   mTheta(1.5f*MathHelper::Pi), mPhi(0.25f*MathHelper::Pi), mRadius(5.0f)
 {
-	mMainWndCaption = L"Box Demo";
+	mMainWndCaption = L"Drawing in Direct3D - Exercise 2";
 	
 	mLastMousePos.x = 0;
 	mLastMousePos.y = 0;
@@ -114,7 +119,7 @@ BoxApp::BoxApp(HINSTANCE hInstance)
 
 BoxApp::~BoxApp()
 {
-	ReleaseCOM(mBoxVB);
+	ReleaseCOM(mBoxPositionVB);
 	ReleaseCOM(mBoxIB);
 	ReleaseCOM(mFX);
 	ReleaseCOM(mInputLayout);
@@ -165,9 +170,17 @@ void BoxApp::DrawScene()
 	md3dImmediateContext->IASetInputLayout(mInputLayout);
     md3dImmediateContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
-	UINT stride = sizeof(Vertex);
-    UINT offset = 0;
-    md3dImmediateContext->IASetVertexBuffers(0, 1, &mBoxVB, &stride, &offset);
+	// Bind position vertices to IA stage at slot 0
+	UINT position_stride = sizeof(VertexPosition);
+    UINT position_offset = 0;
+    md3dImmediateContext->IASetVertexBuffers(0, 1, &mBoxPositionVB, &position_stride, &position_offset);
+
+	// Bind colour vertices to IA stage at slot 1
+	UINT colour_stride = sizeof(VertexColor);
+    UINT colour_offset = 0;
+    md3dImmediateContext->IASetVertexBuffers(1, 1, &mBoxColourVB, &colour_stride, &colour_offset);
+
+	// Bind Index buffer to IA
 	md3dImmediateContext->IASetIndexBuffer(mBoxIB, DXGI_FORMAT_R32_UINT, 0);
 
 	// Set constants
@@ -239,29 +252,52 @@ void BoxApp::OnMouseMove(WPARAM btnState, int x, int y)
 void BoxApp::BuildGeometryBuffers()
 {
 	// Create vertex buffer
-    Vertex vertices[] =
+	VertexPosition positionVertices[] =
     {
-		{ XMFLOAT3(-1.0f, -1.0f, -1.0f), (XMFLOAT4)Colors::White   },
-		{ XMFLOAT3(-1.0f, +1.0f, -1.0f), (XMFLOAT4)Colors::Black   },
-		{ XMFLOAT3(+1.0f, +1.0f, -1.0f), (XMFLOAT4)Colors::Red     },
-		{ XMFLOAT3(+1.0f, -1.0f, -1.0f), (XMFLOAT4)Colors::Green   },
-		{ XMFLOAT3(-1.0f, -1.0f, +1.0f), (XMFLOAT4)Colors::Blue    },
-		{ XMFLOAT3(-1.0f, +1.0f, +1.0f), (XMFLOAT4)Colors::Yellow  },
-		{ XMFLOAT3(+1.0f, +1.0f, +1.0f), (XMFLOAT4)Colors::Cyan    },
-		{ XMFLOAT3(+1.0f, -1.0f, +1.0f), (XMFLOAT4)Colors::Magenta }
+		{ XMFLOAT3(-1.0f, -1.0f, -1.0f) },
+		{ XMFLOAT3(-1.0f, +1.0f, -1.0f) },
+		{ XMFLOAT3(+1.0f, +1.0f, -1.0f) },
+		{ XMFLOAT3(+1.0f, -1.0f, -1.0f) },
+		{ XMFLOAT3(-1.0f, -1.0f, +1.0f) },
+		{ XMFLOAT3(-1.0f, +1.0f, +1.0f) },
+		{ XMFLOAT3(+1.0f, +1.0f, +1.0f) },
+		{ XMFLOAT3(+1.0f, -1.0f, +1.0f) }
     };
 
-    D3D11_BUFFER_DESC vbd;
-    vbd.Usage = D3D11_USAGE_IMMUTABLE;
-    vbd.ByteWidth = sizeof(Vertex) * 8;
-    vbd.BindFlags = D3D11_BIND_VERTEX_BUFFER;
-    vbd.CPUAccessFlags = 0;
-    vbd.MiscFlags = 0;
-	vbd.StructureByteStride = 0;
-    D3D11_SUBRESOURCE_DATA vinitData;
-    vinitData.pSysMem = vertices;
-    HR(md3dDevice->CreateBuffer(&vbd, &vinitData, &mBoxVB));
+    D3D11_BUFFER_DESC position_vbd;
+    position_vbd.Usage = D3D11_USAGE_IMMUTABLE;
+    position_vbd.ByteWidth = sizeof(VertexPosition) * 8;
+    position_vbd.BindFlags = D3D11_BIND_VERTEX_BUFFER;
+    position_vbd.CPUAccessFlags = 0;
+    position_vbd.MiscFlags = 0;
+	position_vbd.StructureByteStride = 0;
+    D3D11_SUBRESOURCE_DATA position_vinitData;
+	position_vinitData.pSysMem = positionVertices;
+    HR(md3dDevice->CreateBuffer(&position_vbd, &position_vinitData, &mBoxPositionVB));
 
+	// Create colour vertex buffer
+	VertexColor colourVertices[] =
+	{
+		{ (XMFLOAT4)Colors::White   },
+		{ (XMFLOAT4)Colors::Black   },
+		{ (XMFLOAT4)Colors::Red     },
+		{ (XMFLOAT4)Colors::Green   },
+		{ (XMFLOAT4)Colors::Blue    },
+		{ (XMFLOAT4)Colors::Yellow  },
+		{ (XMFLOAT4)Colors::Cyan    },
+		{ (XMFLOAT4)Colors::Magenta }
+	};
+
+	D3D11_BUFFER_DESC colour_vbd;
+	colour_vbd.Usage = D3D11_USAGE_IMMUTABLE;
+	colour_vbd.ByteWidth = sizeof(VertexColor) * 8;
+	colour_vbd.BindFlags = D3D11_BIND_VERTEX_BUFFER;
+	colour_vbd.CPUAccessFlags = 0;
+	colour_vbd.MiscFlags = 0;
+	colour_vbd.StructureByteStride = 0;
+	D3D11_SUBRESOURCE_DATA colour_vinitData;
+	colour_vinitData.pSysMem = colourVertices;
+	HR(md3dDevice->CreateBuffer(&colour_vbd, &colour_vinitData, &mBoxColourVB));
 
 	// Create the index buffer
 
@@ -354,7 +390,7 @@ void BoxApp::BuildVertexLayout()
 	D3D11_INPUT_ELEMENT_DESC vertexDesc[] =
 	{
 		{"POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0},
-		{"COLOR",    0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 12, D3D11_INPUT_PER_VERTEX_DATA, 0}
+		{"COLOR",    0, DXGI_FORMAT_R32G32B32A32_FLOAT, 1, 0, D3D11_INPUT_PER_VERTEX_DATA, 0}
 	};
 
 	// Create the input layout
