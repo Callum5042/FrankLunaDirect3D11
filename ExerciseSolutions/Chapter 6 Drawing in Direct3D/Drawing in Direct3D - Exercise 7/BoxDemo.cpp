@@ -7,9 +7,17 @@
 //		Hold the left mouse button down and move the mouse to rotate.
 //      Hold the right mouse button down to zoom in and out.
 //
-// Exercise 4:
-//		Construct the vertex and index list of a pyramid, as shown in Figure 6.19, and
-//		draw it. Color the base vertices green and the tip vertex red.
+// Exercise 7:
+//		Merge the vertices of a box and pyramid into one large vertex buffer. Also
+//		merge the indices of the box and pyramid into one large index buffer (but do 
+//		not update the index values). Then draw the box and pyramid one-by-one
+//		using the parameters of ID3D11DeviceContext::DrawIndexed. Use the world
+//		transformation matrix so that the box and pyramid are disjoint in world space.
+// 
+// Solutions:
+//		Update the vertices and indices and update the size in the buffer ByteWidth.
+//		Call DrawIndex as normal for the cube. For the pyramid, set the StartIndexLocation 
+//		and BaseVertexLocation to the offset of the cube.
 // 
 //***************************************************************************************
 
@@ -88,7 +96,7 @@ BoxApp::BoxApp(HINSTANCE hInstance)
   mfxWorldViewProj(0), mInputLayout(0), 
   mTheta(1.5f*MathHelper::Pi), mPhi(0.25f*MathHelper::Pi), mRadius(5.0f)
 {
-	mMainWndCaption = L"Drawing in Direct3D - Exercise 4";
+	mMainWndCaption = L"Drawing in Direct3D - Exercise 7";
 	
 	mLastMousePos.x = 0;
 	mLastMousePos.y = 0;
@@ -169,10 +177,23 @@ void BoxApp::DrawScene()
     mTech->GetDesc( &techDesc );
     for(UINT p = 0; p < techDesc.Passes; ++p)
     {
+		// Offset cube left 2 units
+		world = XMMatrixTranslation(-2.0f, 0.0f, 0.0f);
+		worldViewProj = world * view * proj;
+		mfxWorldViewProj->SetMatrix(reinterpret_cast<float*>(&worldViewProj));
         mTech->GetPassByIndex(p)->Apply(0, md3dImmediateContext);
-        
+
+		// 36 indices for the box.
+		md3dImmediateContext->DrawIndexed(36, 0, 0);
+
+		// Offset pyramid right 2 units
+		world = XMMatrixTranslation(2.0f, 0.0f, 0.0f);
+		worldViewProj = world * view * proj;
+		mfxWorldViewProj->SetMatrix(reinterpret_cast<float*>(&worldViewProj));
+		mTech->GetPassByIndex(p)->Apply(0, md3dImmediateContext);
+
 		// 18 indices for the pyramid.
-		md3dImmediateContext->DrawIndexed(18, 0, 0);
+		md3dImmediateContext->DrawIndexed(18, 36, 8);
     }
 
 	HR(mSwapChain->Present(0, 0));
@@ -227,17 +248,28 @@ void BoxApp::BuildGeometryBuffers()
 {
 	// Create vertex buffer
     Vertex vertices[] =
-    {
+	{
+		// Cube
+		{ XMFLOAT3(-1.0f, -1.0f, -1.0f), (XMFLOAT4)Colors::White   },
+		{ XMFLOAT3(-1.0f, +1.0f, -1.0f), (XMFLOAT4)Colors::Black   },
+		{ XMFLOAT3(+1.0f, +1.0f, -1.0f), (XMFLOAT4)Colors::Red     },
+		{ XMFLOAT3(+1.0f, -1.0f, -1.0f), (XMFLOAT4)Colors::Green   },
+		{ XMFLOAT3(-1.0f, -1.0f, +1.0f), (XMFLOAT4)Colors::Blue    },
+		{ XMFLOAT3(-1.0f, +1.0f, +1.0f), (XMFLOAT4)Colors::Yellow  },
+		{ XMFLOAT3(+1.0f, +1.0f, +1.0f), (XMFLOAT4)Colors::Cyan    },
+		{ XMFLOAT3(+1.0f, -1.0f, +1.0f), (XMFLOAT4)Colors::Magenta },
+
+		// Pyramid
 		{ XMFLOAT3(-1.0f, -1.0f, -1.0f), (XMFLOAT4)Colors::Green },
 		{ XMFLOAT3(-1.0f, -1.0f, +1.0f), (XMFLOAT4)Colors::Green },
 		{ XMFLOAT3(+1.0f, -1.0f, +1.0f), (XMFLOAT4)Colors::Green },
 		{ XMFLOAT3(+1.0f, -1.0f, -1.0f), (XMFLOAT4)Colors::Green },
 		{ XMFLOAT3(+0.0f, +1.0f, +0.0f), (XMFLOAT4)Colors::Red },
-    };
+	};
 
     D3D11_BUFFER_DESC vbd;
     vbd.Usage = D3D11_USAGE_IMMUTABLE;
-    vbd.ByteWidth = sizeof(Vertex) * 8;
+    vbd.ByteWidth = sizeof(Vertex) * 13;
     vbd.BindFlags = D3D11_BIND_VERTEX_BUFFER;
     vbd.CPUAccessFlags = 0;
     vbd.MiscFlags = 0;
@@ -250,6 +282,39 @@ void BoxApp::BuildGeometryBuffers()
 	// Create the index buffer
 
 	UINT indices[] = {
+
+		//
+		// Cube
+		//
+
+		// front face
+		0, 1, 2,
+		0, 2, 3,
+
+		// back face
+		4, 6, 5,
+		4, 7, 6,
+
+		// left face
+		4, 5, 1,
+		4, 1, 0,
+
+		// right face
+		3, 2, 6,
+		3, 6, 7,
+
+		// top face
+		1, 5, 6,
+		1, 6, 2,
+
+		// bottom face
+		4, 0, 3,
+		4, 3, 7,
+
+		//
+		// Pyramid
+		//
+
 		// bottom face
 		0, 2, 1,
 		2, 0, 3,
@@ -269,7 +334,7 @@ void BoxApp::BuildGeometryBuffers()
 
 	D3D11_BUFFER_DESC ibd;
     ibd.Usage = D3D11_USAGE_IMMUTABLE;
-    ibd.ByteWidth = sizeof(UINT) * 18;
+    ibd.ByteWidth = sizeof(UINT) * 54;
     ibd.BindFlags = D3D11_BIND_INDEX_BUFFER;
     ibd.CPUAccessFlags = 0;
     ibd.MiscFlags = 0;
