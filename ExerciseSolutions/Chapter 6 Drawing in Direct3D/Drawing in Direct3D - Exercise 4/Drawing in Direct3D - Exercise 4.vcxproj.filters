@@ -52,6 +52,9 @@
     <ClInclude Include="..\..\..\Common\d3dUtil.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Common\d3dx11effect.h">
+      <Filter>Common</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\Common\GameTimer.h">
       <Filter>Common</Filter>
     </ClInclude>
@@ -59,9 +62,6 @@
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Common\MathHelper.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Common\d3dx11effect.h">
       <Filter>Common</Filter>
     </ClInclude>
   </ItemGroup>
