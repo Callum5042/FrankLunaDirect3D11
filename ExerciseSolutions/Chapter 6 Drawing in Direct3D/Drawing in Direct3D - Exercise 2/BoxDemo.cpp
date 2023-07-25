@@ -23,6 +23,11 @@
 //		is hooked up to input slot 1. Moreover note that the D3D11_INPUT_ELEMENT_DESC::AlignedByteOffset
 //		is 0 for both elements; this is because the position and
 //		color elements are no longer interleaved in a single input slot.
+// 
+//	Solution:
+//		Create two vertices list one for position and another for colour and then create
+//		two vertex buffers using each of these list. Then bind each each vertex buffer to the
+//		correct slot matching that of the DD3D11_INPUT_ELEMENT_DESC as described above.
 //
 //***************************************************************************************
 
