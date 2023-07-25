@@ -6,6 +6,23 @@
 // Controls:
 //		Hold the left mouse button down and move the mouse to rotate.
 //      Hold the right mouse button down to zoom in and out.
+// 
+//  Exercise 2:
+//		Redo the Colored Cube demo, but this time use two vertex buffers (and two 
+//		input slots) to feed the pipeline with vertices, one that stores the position element 
+//		and the other that stores the color element. Your D3D11_INPUT_ELEMENT_DESC
+//		array wll look like this:
+// 
+//		DD3D11_INPUT_ELEMENT_DESC vertexDesc[] =
+//		{
+//			{"POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0},
+//			{"COLOR", 0, DXGI_FORMAT_R32G32B32A32_FLOAT, 1, 0, D3D11_INPUT_PER_VERTEX_DATA, 0},
+//		}
+// 
+//		The position element is hooked up to input slot 0, and the color element 
+//		is hooked up to input slot 1. Moreover note that the D3D11_INPUT_ELEMENT_DESC::AlignedByteOffset
+//		is 0 for both elements; this is because the position and
+//		color elements are no longer interleaved in a single input slot.
 //
 //***************************************************************************************
 
