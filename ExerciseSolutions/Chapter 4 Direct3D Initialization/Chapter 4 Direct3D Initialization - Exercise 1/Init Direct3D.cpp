@@ -3,6 +3,14 @@
 //
 // Demonstrates the sample framework by initializing Direct3D, clearing 
 // the screen, and displaying frame stats.
+// 
+// Exercise 1:
+//		Modify the previous exercise solution by disbaling the ALT-ENTER
+//		functionality to switch between full screen and windowed mode; use 
+//		the IDXGIFactory::MakeWindowAssociation method and specify the
+//		DXGI_MWA_NO_WINDOW_CHANGES flag so that DXGI does not monitor the message
+//		queue. Note that the IDXGIFactory::MakeWindowAssociation method needs to
+//		be called after IDXGIFactory::CreateSwapChain is called.
 //
 //***************************************************************************************
 
