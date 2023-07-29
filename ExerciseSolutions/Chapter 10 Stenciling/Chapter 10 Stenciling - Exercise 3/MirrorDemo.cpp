@@ -13,6 +13,12 @@
 //      Press '3' - Fog render mode.
 //
 //		Move the skull left/right/up/down with 'A'/'D'/'W'/'S' keys.
+// 
+// Exercise 3:
+//		Modify the "Mirror" demo to produce the "Left" image in Figure 10.1.
+// 
+// Solution: 
+//		Commented out stencil buffer code.
 //
 //***************************************************************************************
 
@@ -111,7 +117,7 @@ MirrorApp::MirrorApp(HINSTANCE hInstance)
   mEyePosW(0.0f, 0.0f, 0.0f), mRenderOptions(RenderOptions::Textures),
   mTheta(1.24f*MathHelper::Pi), mPhi(0.42f*MathHelper::Pi), mRadius(12.0f)
 {
-	mMainWndCaption = L"Chapter 10 Stenciling - Exercise 1";
+	mMainWndCaption = L"Chapter 10 Stenciling - Exercise 3";
 	mEnable4xMsaa = false;
 
 	mLastMousePos.x = 0;
@@ -367,37 +373,37 @@ void MirrorApp::DrawScene()
 	// Draw the mirror to stencil buffer only.
 	//
 
-	activeTech->GetDesc( &techDesc );
-	for(UINT p = 0; p < techDesc.Passes; ++p)
-    { 
-		ID3DX11EffectPass* pass = activeTech->GetPassByIndex( p );
+	//activeTech->GetDesc( &techDesc );
+	//for(UINT p = 0; p < techDesc.Passes; ++p)
+ //   { 
+	//	ID3DX11EffectPass* pass = activeTech->GetPassByIndex( p );
 
-		md3dImmediateContext->IASetVertexBuffers(0, 1, &mRoomVB, &stride, &offset);
+	//	md3dImmediateContext->IASetVertexBuffers(0, 1, &mRoomVB, &stride, &offset);
 
-		// Set per object constants.
-		XMMATRIX world = XMLoadFloat4x4(&mRoomWorld);
-		XMMATRIX worldInvTranspose = MathHelper::InverseTranspose(world);
-		XMMATRIX worldViewProj = world*view*proj;
-		
-		Effects::BasicFX->SetWorld(world);
-		Effects::BasicFX->SetWorldInvTranspose(worldInvTranspose);
-		Effects::BasicFX->SetWorldViewProj(worldViewProj);
-		Effects::BasicFX->SetTexTransform(XMMatrixIdentity());
+	//	// Set per object constants.
+	//	XMMATRIX world = XMLoadFloat4x4(&mRoomWorld);
+	//	XMMATRIX worldInvTranspose = MathHelper::InverseTranspose(world);
+	//	XMMATRIX worldViewProj = world*view*proj;
+	//	
+	//	Effects::BasicFX->SetWorld(world);
+	//	Effects::BasicFX->SetWorldInvTranspose(worldInvTranspose);
+	//	Effects::BasicFX->SetWorldViewProj(worldViewProj);
+	//	Effects::BasicFX->SetTexTransform(XMMatrixIdentity());
 
-		// Do not write to render target.
-		md3dImmediateContext->OMSetBlendState(RenderStates::NoRenderTargetWritesBS, blendFactor, 0xffffffff);
+	//	// Do not write to render target.
+	//	md3dImmediateContext->OMSetBlendState(RenderStates::NoRenderTargetWritesBS, blendFactor, 0xffffffff);
 
-		// Render visible mirror pixels to stencil buffer.
-		// Do not write mirror depth to depth buffer at this point, otherwise it will occlude the reflection.
-		md3dImmediateContext->OMSetDepthStencilState(RenderStates::MarkMirrorDSS, 1);
-		
-		pass->Apply(0, md3dImmediateContext);
-		md3dImmediateContext->Draw(6, 24);
+	//	// Render visible mirror pixels to stencil buffer.
+	//	// Do not write mirror depth to depth buffer at this point, otherwise it will occlude the reflection.
+	//	md3dImmediateContext->OMSetDepthStencilState(RenderStates::MarkMirrorDSS, 1);
+	//	
+	//	pass->Apply(0, md3dImmediateContext);
+	//	md3dImmediateContext->Draw(6, 24);
 
-		// Restore states.
-		md3dImmediateContext->OMSetDepthStencilState(0, 0);
-		md3dImmediateContext->OMSetBlendState(0, blendFactor, 0xffffffff);
-	}
+	//	// Restore states.
+	//	md3dImmediateContext->OMSetDepthStencilState(0, 0);
+	//	md3dImmediateContext->OMSetBlendState(0, blendFactor, 0xffffffff);
+	//}
 
 
 	//
@@ -439,7 +445,7 @@ void MirrorApp::DrawScene()
 		md3dImmediateContext->RSSetState(RenderStates::CullClockwiseRS);
 
 		// Only draw reflection into visible mirror pixels as marked by the stencil buffer. 
-		md3dImmediateContext->OMSetDepthStencilState(RenderStates::DrawReflectionDSS, 1);
+		// md3dImmediateContext->OMSetDepthStencilState(RenderStates::DrawReflectionDSS, 1);
 		pass->Apply(0, md3dImmediateContext);
 		md3dImmediateContext->DrawIndexed(mSkullIndexCount, 0, 0);
 
@@ -512,7 +518,7 @@ void MirrorApp::DrawScene()
 		Effects::BasicFX->SetWorldViewProj(worldViewProj);
 		Effects::BasicFX->SetMaterial(mShadowMat);
 
-		md3dImmediateContext->OMSetDepthStencilState(RenderStates::NoDoubleBlendDSS, 0);
+		// md3dImmediateContext->OMSetDepthStencilState(RenderStates::NoDoubleBlendDSS, 0);
 		pass->Apply(0, md3dImmediateContext);
 		md3dImmediateContext->DrawIndexed(mSkullIndexCount, 0, 0);
 
