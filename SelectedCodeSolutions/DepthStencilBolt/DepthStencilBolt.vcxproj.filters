@@ -71,6 +71,9 @@
     <ClCompile Include="..\..\Common\DDSTextureLoader.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="WICTextureLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Effects.h">
@@ -117,6 +120,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Common\DDSTextureLoader.h">
       <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="WICTextureLoader.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

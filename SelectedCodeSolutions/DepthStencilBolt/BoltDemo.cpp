@@ -24,6 +24,7 @@
 #include "RenderStates.h"
 #include "Waves.h"
 #include <DDSTextureLoader.h>
+#include "WICTextureLoader.h"
 
 enum RenderOptions
 {
@@ -203,12 +204,9 @@ bool BlendApp::Init()
 	RenderStates::InitAll(md3dDevice);
 
 
-
-	/*HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
-		L"Textures/grass.dds", 0, 0, &mGrassMapSRV, 0 ));
-
-	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
-		L"Textures/water2.dds", 0, 0, &mWavesMapSRV, 0 ));*/
+	ID3D11Resource* texResource = nullptr;
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/grass.dds", &texResource, &mGrassMapSRV));
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/water2.dds", &texResource, &mWavesMapSRV));
 
 	for(int i = 0; i < 60; ++i)
 	{
@@ -225,11 +223,8 @@ bool BlendApp::Init()
 		filename += frameNum.str();
 		filename += L".bmp";
 
-		/*HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
-			filename.c_str(), 0, 0, &mBoltMapSRV[i], 0 ));*/
-
 		ID3D11Resource* texResource = nullptr;
-		HR(DirectX::CreateDDSTextureFromFile(md3dDevice, filename.c_str(), &texResource, &mBoltMapSRV[i]));
+		HR(DirectX::CreateWICTextureFromFile(md3dDevice, filename.c_str(), &texResource, &mBoltMapSRV[i]));
 	}
 
 	BuildLandGeometryBuffers();
