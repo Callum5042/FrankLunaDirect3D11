@@ -144,7 +144,7 @@ BlendApp::BlendApp(HINSTANCE hInstance)
 	XMStoreFloat4x4(&mView, I);
 	XMStoreFloat4x4(&mProj, I);
 
-	DirectX::XMMATRIX boxScale = DirectX::XMMatrixScaling(15.0f, 30.0f, 15.0f);
+	DirectX::XMMATRIX boxScale = DirectX::XMMatrixScaling(15.0f, 15.0f, 15.0f);
 	DirectX::XMMATRIX boxOffset = DirectX::XMMatrixTranslation(0.0f, 10.0f, 0.0f);
 	XMStoreFloat4x4(&mBoxWorld, boxScale*boxOffset);
 
@@ -376,37 +376,6 @@ void BlendApp::DrawScene()
 	D3DX11_TECHNIQUE_DESC techDesc;
 
 	//
-	// Draw the box with alpha clipping.
-	// 
-
-	boxTech->GetDesc( &techDesc );
-	for(UINT p = 0; p < techDesc.Passes; ++p)
-    {
-		md3dImmediateContext->IASetVertexBuffers(0, 1, &mBoxVB, &stride, &offset);
-		md3dImmediateContext->IASetIndexBuffer(mBoxIB, DXGI_FORMAT_R32_UINT, 0);
-
-		// Set per object constants.
-		DirectX::XMMATRIX world = XMLoadFloat4x4(&mBoxWorld);
-		DirectX::XMMATRIX worldInvTranspose = MathHelper::InverseTranspose(world);
-		DirectX::XMMATRIX worldViewProj = world*view*proj;
-		
-		Effects::BasicFX->SetWorld(world);
-		Effects::BasicFX->SetWorldInvTranspose(worldInvTranspose);
-		Effects::BasicFX->SetWorldViewProj(worldViewProj);
-		Effects::BasicFX->SetTexTransform(DirectX::XMMatrixIdentity());
-		Effects::BasicFX->SetMaterial(mBoxMat);
-		Effects::BasicFX->SetDiffuseMap(mAnimatedElectricBolts[mFrameIndex]);
-
-
-		md3dImmediateContext->RSSetState(RenderStates::NoCullRS);
-		boxTech->GetPassByIndex(p)->Apply(0, md3dImmediateContext);
-		md3dImmediateContext->DrawIndexed(mCylinderIndexCount, 0, 0);
-
-		// Restore default render state.
-		md3dImmediateContext->RSSetState(0);
-	}
-
-	//
 	// Draw the hills and water with texture and fog (no alpha clipping needed).
 	//
 
@@ -459,6 +428,41 @@ void BlendApp::DrawScene()
 		// Restore default blend state
 		md3dImmediateContext->OMSetBlendState(0, blendFactor, 0xffffffff);
     }
+
+	//
+	// Draw the box with alpha clipping.
+	// 
+
+	boxTech->GetDesc(&techDesc);
+	for (UINT p = 0; p < techDesc.Passes; ++p)
+	{
+		md3dImmediateContext->IASetVertexBuffers(0, 1, &mBoxVB, &stride, &offset);
+		md3dImmediateContext->IASetIndexBuffer(mBoxIB, DXGI_FORMAT_R32_UINT, 0);
+
+		// Set per object constants.
+		DirectX::XMMATRIX world = XMLoadFloat4x4(&mBoxWorld);
+		DirectX::XMMATRIX worldInvTranspose = MathHelper::InverseTranspose(world);
+		DirectX::XMMATRIX worldViewProj = world * view * proj;
+
+		Effects::BasicFX->SetWorld(world);
+		Effects::BasicFX->SetWorldInvTranspose(worldInvTranspose);
+		Effects::BasicFX->SetWorldViewProj(worldViewProj);
+		Effects::BasicFX->SetTexTransform(DirectX::XMMatrixIdentity());
+		Effects::BasicFX->SetMaterial(mBoxMat);
+		Effects::BasicFX->SetDiffuseMap(mAnimatedElectricBolts[mFrameIndex]);
+
+
+		md3dImmediateContext->RSSetState(RenderStates::NoCullRS);
+		md3dImmediateContext->OMSetBlendState(RenderStates::AdditiveBS, blendFactor, 0xffffffff);
+		// md3dImmediateContext->OMSetDepthStencilState(RenderStates::DepthWriteOffDSS, 0);
+		boxTech->GetPassByIndex(p)->Apply(0, md3dImmediateContext);
+		md3dImmediateContext->DrawIndexed(mCylinderIndexCount, 0, 0);
+
+		// Restore default render state.
+		md3dImmediateContext->RSSetState(0);
+		md3dImmediateContext->OMSetBlendState(0, blendFactor, 0xffffffff);
+		md3dImmediateContext->OMSetDepthStencilState(0, 0);
+	}
 
 	HR(mSwapChain->Present(0, 0));
 }
