@@ -93,6 +93,7 @@ BasicEffect::BasicEffect(ID3D11Device* device, const std::wstring& filename)
 	WorldInvTranspose = mFX->GetVariableByName("gWorldInvTranspose")->AsMatrix();
 	TexTransform      = mFX->GetVariableByName("gTexTransform")->AsMatrix();
 	ShadowTransform   = mFX->GetVariableByName("gShadowTransform")->AsMatrix();
+	ProjectorTransform = mFX->GetVariableByName("gProjectorTransform")->AsMatrix();
 	EyePosW           = mFX->GetVariableByName("gEyePosW")->AsVector();
 	FogColor          = mFX->GetVariableByName("gFogColor")->AsVector();
 	FogStart          = mFX->GetVariableByName("gFogStart")->AsScalar();
@@ -102,6 +103,7 @@ BasicEffect::BasicEffect(ID3D11Device* device, const std::wstring& filename)
 	DiffuseMap        = mFX->GetVariableByName("gDiffuseMap")->AsShaderResource();
 	CubeMap           = mFX->GetVariableByName("gCubeMap")->AsShaderResource();
 	ShadowMap         = mFX->GetVariableByName("gShadowMap")->AsShaderResource();
+	ProjectorMap	  = mFX->GetVariableByName("gProjectorMap")->AsShaderResource();
 }
 
 BasicEffect::~BasicEffect()

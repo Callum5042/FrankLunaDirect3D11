@@ -458,9 +458,11 @@ void ShadowsApp::DrawScene()
 			Effects::BasicFX->SetWorldInvTranspose(worldInvTranspose);
 			Effects::BasicFX->SetWorldViewProj(worldViewProj);
 			Effects::BasicFX->SetShadowTransform(world*shadowTransform);
+			Effects::BasicFX->SetProjectorTransform(DirectX::XMMatrixIdentity());
 			Effects::BasicFX->SetTexTransform(XMMatrixScaling(8.0f, 10.0f, 1.0f));
 			Effects::BasicFX->SetMaterial(mGridMat);
 			Effects::BasicFX->SetDiffuseMap(mStoneTexSRV);
+			Effects::BasicFX->SetProjectorMap(mStoneTexSRV);
 			break;
 		case RenderOptionsNormalMap:
 			Effects::NormalMapFX->SetWorld(world);
