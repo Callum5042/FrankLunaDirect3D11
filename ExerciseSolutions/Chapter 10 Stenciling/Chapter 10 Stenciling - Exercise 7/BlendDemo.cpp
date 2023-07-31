@@ -454,7 +454,7 @@ void BlendApp::DrawScene()
 
 		md3dImmediateContext->RSSetState(RenderStates::NoCullRS);
 		md3dImmediateContext->OMSetBlendState(RenderStates::AdditiveBS, blendFactor, 0xffffffff);
-		// md3dImmediateContext->OMSetDepthStencilState(RenderStates::DepthWriteOffDSS, 0);
+		md3dImmediateContext->OMSetDepthStencilState(RenderStates::DepthWriteOffDSS, 0);
 		boxTech->GetPassByIndex(p)->Apply(0, md3dImmediateContext);
 		md3dImmediateContext->DrawIndexed(mCylinderIndexCount, 0, 0);
 
