@@ -1,8 +1,7 @@
 //***************************************************************************************
-// BoltDemo.cpp by Frank Luna (C) 2011 All Rights Reserved.
+// BlendDemo.cpp by Frank Luna (C) 2011 All Rights Reserved.
 //
-// Chapter 10, Exercise 7 Solution.  Demonstrates additive blending and setting the 
-// proper depth/stencil state.
+// Demonstrates blending, HLSL clip(), and fogging.
 //
 // Controls:
 //		Hold the left mouse button down and move the mouse to rotate.
@@ -11,6 +10,13 @@
 //      Press '1' - Lighting only render mode.
 //      Press '2' - Texture render mode.
 //      Press '3' - Fog render mode.
+// 
+// Exercise 7:
+//		Modify the "Blend" demo from Chapter 9 to draw a cylinder (with no caps) at
+//		the center of the scene. Texture the cylinder with the 60 frame animated electric
+//		bolt animation found in this chapter's directory using additive blending.
+//		Figure 10.11 shows an example of the output. (Hint: Refer back to 9.5.5 for
+//		the depth state to use when rendering additive blending eometry.)
 //
 //***************************************************************************************
 
@@ -23,7 +29,10 @@
 #include "Vertex.h"
 #include "RenderStates.h"
 #include "Waves.h"
-#include <DDSTextureLoader.h>
+#include <array>
+#include <string>
+#include <sstream>
+#include <iomanip>
 #include "WICTextureLoader.h"
 
 enum RenderOptions
@@ -50,10 +59,10 @@ public:
 
 private:
 	float GetHillHeight(float x, float z)const;
-	XMFLOAT3 GetHillNormal(float x, float z)const;
+	DirectX::XMFLOAT3 GetHillNormal(float x, float z)const;
 	void BuildLandGeometryBuffers();
 	void BuildWaveGeometryBuffers();
-	void BuildBoltGeometryBuffers(float radius, float length);
+	void BuildCrateGeometryBuffers();
 
 private:
 	ID3D11Buffer* mLandVB;
@@ -62,40 +71,38 @@ private:
 	ID3D11Buffer* mWavesVB;
 	ID3D11Buffer* mWavesIB;
 
-	ID3D11Buffer* mBoltCylinderVB;
-	ID3D11Buffer* mBoltCylinderIB;
+	ID3D11Buffer* mBoxVB;
+	ID3D11Buffer* mBoxIB;
 
 	ID3D11ShaderResourceView* mGrassMapSRV;
 	ID3D11ShaderResourceView* mWavesMapSRV;
-	ID3D11ShaderResourceView* mBoltMapSRV[60];
+	std::array<ID3D11ShaderResourceView*, 60> mAnimatedElectricBolts;
+	int mFrameIndex = 0;
 
 	Waves mWaves;
 
 	DirectionalLight mDirLights[3];
 	Material mLandMat;
 	Material mWavesMat;
-	Material mBoltMat;
+	Material mBoxMat;
 
-	XMFLOAT4X4 mGrassTexTransform;
-	XMFLOAT4X4 mWaterTexTransform;
-	XMFLOAT4X4 mBoltTexTransform;
-	XMFLOAT4X4 mLandWorld;
-	XMFLOAT4X4 mWavesWorld;
-	XMFLOAT4X4 mBoltWorld;
+	DirectX::XMFLOAT4X4 mGrassTexTransform;
+	DirectX::XMFLOAT4X4 mWaterTexTransform;
+	DirectX::XMFLOAT4X4 mLandWorld;
+	DirectX::XMFLOAT4X4 mWavesWorld;
+	DirectX::XMFLOAT4X4 mBoxWorld;
 
-	XMFLOAT4X4 mView;
-	XMFLOAT4X4 mProj;
+	DirectX::XMFLOAT4X4 mView;
+	DirectX::XMFLOAT4X4 mProj;
 
+	UINT mCylinderIndexCount;
 	UINT mLandIndexCount;
-	UINT mBoltIndexCount;
 
-	UINT mBoltFrameIndex;
-
-	XMFLOAT2 mWaterTexOffset;
+	DirectX::XMFLOAT2 mWaterTexOffset;
 
 	RenderOptions mRenderOptions;
 
-	XMFLOAT3 mEyePosW;
+	DirectX::XMFLOAT3 mEyePosW;
 
 	float mTheta;
 	float mPhi;
@@ -121,55 +128,55 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 }
 
 BlendApp::BlendApp(HINSTANCE hInstance)
-: D3DApp(hInstance), mLandVB(0), mLandIB(0), mWavesVB(0), mWavesIB(0), mBoltCylinderVB(0), mBoltCylinderIB(0), mGrassMapSRV(0), mWavesMapSRV(0), 
-  mWaterTexOffset(0.0f, 0.0f), mEyePosW(0.0f, 0.0f, 0.0f), mLandIndexCount(0), mBoltIndexCount(0), mBoltFrameIndex(0),
-  mRenderOptions(RenderOptions::TexturesAndFog), mTheta(1.65f*MathHelper::Pi), mPhi(0.3f*MathHelper::Pi), mRadius(60.0f)
+: D3DApp(hInstance), mLandVB(0), mLandIB(0), mWavesVB(0), mWavesIB(0), mBoxVB(0), mBoxIB(0), mGrassMapSRV(0), mWavesMapSRV(0),
+  mWaterTexOffset(0.0f, 0.0f), mEyePosW(0.0f, 0.0f, 0.0f), mLandIndexCount(0), mRenderOptions(RenderOptions::TexturesAndFog),
+  mTheta(1.3f*MathHelper::Pi), mPhi(0.4f*MathHelper::Pi), mRadius(80.0f)
 {
-	mMainWndCaption = L"Bolt Demo";
+	mMainWndCaption = L"Chapter 10 Stenciling - Exercise 7";
 	mEnable4xMsaa = false;
 
 	mLastMousePos.x = 0;
 	mLastMousePos.y = 0;
 
-	XMMATRIX I = XMMatrixIdentity();
+	DirectX::XMMATRIX I = DirectX::XMMatrixIdentity();
 	XMStoreFloat4x4(&mLandWorld, I);
 	XMStoreFloat4x4(&mWavesWorld, I);
 	XMStoreFloat4x4(&mView, I);
 	XMStoreFloat4x4(&mProj, I);
 
-	XMMATRIX boltScale = XMMatrixScaling(1.0f, 1.0f, 1.0f);
-	XMMATRIX boltOffset = XMMatrixTranslation(8.0f, 5.0f, -15.0f);
-	XMStoreFloat4x4(&mBoltWorld, boltScale*boltOffset);
+	DirectX::XMMATRIX boxScale = DirectX::XMMatrixScaling(15.0f, 15.0f, 15.0f);
+	DirectX::XMMATRIX boxOffset = DirectX::XMMatrixTranslation(0.0f, 10.0f, 0.0f);
+	XMStoreFloat4x4(&mBoxWorld, boxScale*boxOffset);
 
-	XMMATRIX grassTexScale = XMMatrixScaling(5.0f, 5.0f, 0.0f);
+	DirectX::XMMATRIX grassTexScale = DirectX::XMMatrixScaling(5.0f, 5.0f, 0.0f);
 	XMStoreFloat4x4(&mGrassTexTransform, grassTexScale);
 
-	mDirLights[0].Ambient  = XMFLOAT4(0.2f, 0.2f, 0.2f, 1.0f);
-	mDirLights[0].Diffuse  = XMFLOAT4(0.5f, 0.5f, 0.5f, 1.0f);
-	mDirLights[0].Specular = XMFLOAT4(0.5f, 0.5f, 0.5f, 1.0f);
-	mDirLights[0].Direction = XMFLOAT3(0.57735f, -0.57735f, 0.57735f);
+	mDirLights[0].Ambient  = DirectX::XMFLOAT4(0.2f, 0.2f, 0.2f, 1.0f);
+	mDirLights[0].Diffuse  = DirectX::XMFLOAT4(0.5f, 0.5f, 0.5f, 1.0f);
+	mDirLights[0].Specular = DirectX::XMFLOAT4(0.5f, 0.5f, 0.5f, 1.0f);
+	mDirLights[0].Direction = DirectX::XMFLOAT3(0.57735f, -0.57735f, 0.57735f);
 
-	mDirLights[1].Ambient  = XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f);
-	mDirLights[1].Diffuse  = XMFLOAT4(0.20f, 0.20f, 0.20f, 1.0f);
-	mDirLights[1].Specular = XMFLOAT4(0.25f, 0.25f, 0.25f, 1.0f);
-	mDirLights[1].Direction = XMFLOAT3(-0.57735f, -0.57735f, 0.57735f);
+	mDirLights[1].Ambient  = DirectX::XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f);
+	mDirLights[1].Diffuse  = DirectX::XMFLOAT4(0.20f, 0.20f, 0.20f, 1.0f);
+	mDirLights[1].Specular = DirectX::XMFLOAT4(0.25f, 0.25f, 0.25f, 1.0f);
+	mDirLights[1].Direction = DirectX::XMFLOAT3(-0.57735f, -0.57735f, 0.57735f);
 
-	mDirLights[2].Ambient  = XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f);
-	mDirLights[2].Diffuse  = XMFLOAT4(0.2f, 0.2f, 0.2f, 1.0f);
-	mDirLights[2].Specular = XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f);
-	mDirLights[2].Direction = XMFLOAT3(0.0f, -0.707f, -0.707f);
+	mDirLights[2].Ambient  = DirectX::XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f);
+	mDirLights[2].Diffuse  = DirectX::XMFLOAT4(0.2f, 0.2f, 0.2f, 1.0f);
+	mDirLights[2].Specular = DirectX::XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f);
+	mDirLights[2].Direction = DirectX::XMFLOAT3(0.0f, -0.707f, -0.707f);
 
-	mLandMat.Ambient  = XMFLOAT4(0.5f, 0.5f, 0.5f, 1.0f);
-	mLandMat.Diffuse  = XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
-	mLandMat.Specular = XMFLOAT4(0.2f, 0.2f, 0.2f, 16.0f);
+	mLandMat.Ambient  = DirectX::XMFLOAT4(0.5f, 0.5f, 0.5f, 1.0f);
+	mLandMat.Diffuse  = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
+	mLandMat.Specular = DirectX::XMFLOAT4(0.2f, 0.2f, 0.2f, 16.0f);
 
-	mWavesMat.Ambient  = XMFLOAT4(0.5f, 0.5f, 0.5f, 1.0f);
-	mWavesMat.Diffuse  = XMFLOAT4(1.0f, 1.0f, 1.0f, 0.5f);
-	mWavesMat.Specular = XMFLOAT4(0.8f, 0.8f, 0.8f, 32.0f);
+	mWavesMat.Ambient  = DirectX::XMFLOAT4(0.5f, 0.5f, 0.5f, 1.0f);
+	mWavesMat.Diffuse  = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 0.5f);
+	mWavesMat.Specular = DirectX::XMFLOAT4(0.8f, 0.8f, 0.8f, 32.0f);
 
-	mBoltMat.Ambient  = XMFLOAT4(0.5f, 0.5f, 0.5f, 1.0f);
-	mBoltMat.Diffuse  = XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
-	mBoltMat.Specular = XMFLOAT4(0.4f, 0.4f, 0.4f, 16.0f);
+	mBoxMat.Ambient  = DirectX::XMFLOAT4(0.5f, 0.5f, 0.5f, 1.0f);
+	mBoxMat.Diffuse  = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
+	mBoxMat.Specular = DirectX::XMFLOAT4(0.4f, 0.4f, 0.4f, 16.0f);
 }
 
 BlendApp::~BlendApp()
@@ -179,12 +186,15 @@ BlendApp::~BlendApp()
 	ReleaseCOM(mLandIB);
 	ReleaseCOM(mWavesVB);
 	ReleaseCOM(mWavesIB);
-	ReleaseCOM(mBoltCylinderVB);
-	ReleaseCOM(mBoltCylinderIB);
+	ReleaseCOM(mBoxVB);
+	ReleaseCOM(mBoxIB);
 	ReleaseCOM(mGrassMapSRV);
 	ReleaseCOM(mWavesMapSRV);
-	for(int i = 0; i < 60; ++i)
-		ReleaseCOM(mBoltMapSRV[i]);
+
+	for (auto& texture : mAnimatedElectricBolts)
+	{
+		ReleaseCOM(texture);
+	}
 
 	Effects::DestroyAll();
 	InputLayouts::DestroyAll();
@@ -203,33 +213,25 @@ bool BlendApp::Init()
 	InputLayouts::InitAll(md3dDevice);
 	RenderStates::InitAll(md3dDevice);
 
-
 	ID3D11Resource* texResource = nullptr;
 	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/grass.dds", &texResource, &mGrassMapSRV));
+	ReleaseCOM(texResource); // view saves reference
+
 	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/water2.dds", &texResource, &mWavesMapSRV));
+	ReleaseCOM(texResource); // view saves reference
 
-	for(int i = 0; i < 60; ++i)
+	for (int i = 0; i < 60; ++i)
 	{
-		std::wstring filename = L"Textures/BoltAnim/Bolt";
+		std::wstringstream ss;
+		ss << L"Textures/BoltAnim/Bolt" << std::setw(3) << std::setfill(L'0') << (i + 1) << L".bmp";
 
-		if( i+1 <= 9 )
-			filename += L"0";
-
-		if( i+1 <= 99 )
-			filename += L"0";
-
-		std::wstringstream frameNum;
-		frameNum << i+1;
-		filename += frameNum.str();
-		filename += L".bmp";
-
-		ID3D11Resource* texResource = nullptr;
-		HR(DirectX::CreateWICTextureFromFile(md3dDevice, filename.c_str(), &texResource, &mBoltMapSRV[i]));
+		HR(DirectX::CreateWICTextureFromFile(md3dDevice, ss.str().c_str(), &texResource, &mAnimatedElectricBolts[i]));
+		ReleaseCOM(texResource);
 	}
 
 	BuildLandGeometryBuffers();
 	BuildWaveGeometryBuffers();
-	BuildBoltGeometryBuffers(12.0f, 15.0f);
+	BuildCrateGeometryBuffers();
 
 	return true;
 }
@@ -238,25 +240,28 @@ void BlendApp::OnResize()
 {
 	D3DApp::OnResize();
 
-	XMMATRIX P = XMMatrixPerspectiveFovLH(0.25f*MathHelper::Pi, AspectRatio(), 1.0f, 1000.0f);
+	DirectX::XMMATRIX P = DirectX::XMMatrixPerspectiveFovLH(0.25f*MathHelper::Pi, AspectRatio(), 1.0f, 1000.0f);
 	XMStoreFloat4x4(&mProj, P);
 }
 
 void BlendApp::UpdateScene(float dt)
 {
+	// Update texture animation index
+	mFrameIndex = (static_cast<int>(mTimer.TotalTime() * 30) % 60);
+
 	// Convert Spherical to Cartesian coordinates.
 	float x = mRadius*sinf(mPhi)*cosf(mTheta);
 	float z = mRadius*sinf(mPhi)*sinf(mTheta);
 	float y = mRadius*cosf(mPhi);
 
-	mEyePosW = XMFLOAT3(x, y, z);
+	mEyePosW = DirectX::XMFLOAT3(x, y, z);
 
 	// Build the view matrix.
-	XMVECTOR pos    = XMVectorSet(x, y, z, 1.0f);
-	XMVECTOR target = XMVectorZero();
-	XMVECTOR up     = XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);
+	DirectX::XMVECTOR pos    = DirectX::XMVectorSet(x, y, z, 1.0f);
+	DirectX::XMVECTOR target = DirectX::XMVectorZero();
+	DirectX::XMVECTOR up     = DirectX::XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);
 
-	XMMATRIX V = XMMatrixLookAtLH(pos, target, up);
+	DirectX::XMMATRIX V = DirectX::XMMatrixLookAtLH(pos, target, up);
 	XMStoreFloat4x4(&mView, V);
 
 	//
@@ -302,40 +307,15 @@ void BlendApp::UpdateScene(float dt)
 	//
 
 	// Tile water texture.
-	XMMATRIX wavesScale = XMMatrixScaling(5.0f, 5.0f, 0.0f);
+	DirectX::XMMATRIX wavesScale = DirectX::XMMatrixScaling(5.0f, 5.0f, 0.0f);
 
 	// Translate texture over time.
 	mWaterTexOffset.y += 0.05f*dt;
 	mWaterTexOffset.x += 0.1f*dt;	
-	XMMATRIX wavesOffset = XMMatrixTranslation(mWaterTexOffset.x, mWaterTexOffset.y, 0.0f);
+	DirectX::XMMATRIX wavesOffset = DirectX::XMMatrixTranslation(mWaterTexOffset.x, mWaterTexOffset.y, 0.0f);
 
 	// Combine scale and translation.
 	XMStoreFloat4x4(&mWaterTexTransform, wavesScale*wavesOffset);
-
-	//
-	// Animate bolt texture.
-	//
-
-	XMMATRIX boltScale = XMMatrixScaling(3.0f, 1.5f, 1.0f);
-	XMMATRIX boltTranslation = XMMatrixTranslation(mTimer.TotalTime() * 0.02f, 0.0f, 0.0f);
-	XMStoreFloat4x4(&mBoltTexTransform, boltScale*boltTranslation);
-
-
-	//
-	// Animate bolt animation frame.
-	//
-
-	static float t = 0.0f;
-	t += dt;
-
-	if( t >= 0.033333f )
-	{
-		mBoltFrameIndex++;
-		t = 0.0f;
-
-		if(mBoltFrameIndex == 60)
-			mBoltFrameIndex = 0;
-	}
 
 	//
 	// Switch the render mode based in key input.
@@ -347,7 +327,7 @@ void BlendApp::UpdateScene(float dt)
 		mRenderOptions = RenderOptions::Textures; 
 
 	if( GetAsyncKeyState('3') & 0x8000 )
-		mRenderOptions = RenderOptions::TexturesAndFog; 
+		mRenderOptions = RenderOptions::TexturesAndFog;
 }
 
 void BlendApp::DrawScene()
@@ -363,9 +343,9 @@ void BlendApp::DrawScene()
 	UINT stride = sizeof(Vertex::Basic32);
     UINT offset = 0;
  
-	XMMATRIX view  = XMLoadFloat4x4(&mView);
-	XMMATRIX proj  = XMLoadFloat4x4(&mProj);
-	XMMATRIX viewProj = view*proj;
+	DirectX::XMMATRIX view  = XMLoadFloat4x4(&mView);
+	DirectX::XMMATRIX proj  = XMLoadFloat4x4(&mProj);
+	DirectX::XMMATRIX viewProj = view*proj;
 
 	// Set per frame constants.
 	Effects::BasicFX->SetDirLights(mDirLights);
@@ -374,27 +354,27 @@ void BlendApp::DrawScene()
 	Effects::BasicFX->SetFogStart(15.0f);
 	Effects::BasicFX->SetFogRange(175.0f);
  
-	ID3DX11EffectTechnique* boltTech;
+	ID3DX11EffectTechnique* boxTech;
 	ID3DX11EffectTechnique* landAndWavesTech;
 
 	switch(mRenderOptions)
 	{
 	case RenderOptions::Lighting:
-		boltTech = Effects::BasicFX->Light0TexTech;
+		boxTech = Effects::BasicFX->Light3Tech;
 		landAndWavesTech = Effects::BasicFX->Light3Tech;
 		break;
 	case RenderOptions::Textures:
-		boltTech = Effects::BasicFX->Light0TexTech;
+		boxTech = Effects::BasicFX->Light3TexAlphaClipTech;
 		landAndWavesTech = Effects::BasicFX->Light3TexTech;
 		break;
 	case RenderOptions::TexturesAndFog:
-		boltTech = Effects::BasicFX->Light0TexTech;
+		boxTech = Effects::BasicFX->Light3TexAlphaClipFogTech;
 		landAndWavesTech = Effects::BasicFX->Light3TexFogTech;
 		break;
 	}
-
-	D3DX11_TECHNIQUE_DESC techDesc;
 	
+	D3DX11_TECHNIQUE_DESC techDesc;
+
 	//
 	// Draw the hills and water with texture and fog (no alpha clipping needed).
 	//
@@ -409,9 +389,9 @@ void BlendApp::DrawScene()
 		md3dImmediateContext->IASetIndexBuffer(mLandIB, DXGI_FORMAT_R32_UINT, 0);
 
 		// Set per object constants.
-		XMMATRIX world = XMLoadFloat4x4(&mLandWorld);
-		XMMATRIX worldInvTranspose = MathHelper::InverseTranspose(world);
-		XMMATRIX worldViewProj = world*view*proj;
+		DirectX::XMMATRIX world = XMLoadFloat4x4(&mLandWorld);
+		DirectX::XMMATRIX worldInvTranspose = MathHelper::InverseTranspose(world);
+		DirectX::XMMATRIX worldViewProj = world*view*proj;
 		
 		Effects::BasicFX->SetWorld(world);
 		Effects::BasicFX->SetWorldInvTranspose(worldInvTranspose);
@@ -450,39 +430,39 @@ void BlendApp::DrawScene()
     }
 
 	//
-	// Draw the bolt last with additive blending and no depth writes.
+	// Draw the box with alpha clipping.
 	// 
 
-	boltTech->GetDesc( &techDesc );
-	for(UINT p = 0; p < techDesc.Passes; ++p)
-    {
-		md3dImmediateContext->IASetVertexBuffers(0, 1, &mBoltCylinderVB, &stride, &offset);
-		md3dImmediateContext->IASetIndexBuffer(mBoltCylinderIB, DXGI_FORMAT_R16_UINT, 0);
+	boxTech->GetDesc(&techDesc);
+	for (UINT p = 0; p < techDesc.Passes; ++p)
+	{
+		md3dImmediateContext->IASetVertexBuffers(0, 1, &mBoxVB, &stride, &offset);
+		md3dImmediateContext->IASetIndexBuffer(mBoxIB, DXGI_FORMAT_R32_UINT, 0);
 
 		// Set per object constants.
-		XMMATRIX world = XMLoadFloat4x4(&mBoltWorld);
-		XMMATRIX worldInvTranspose = MathHelper::InverseTranspose(world);
-		XMMATRIX worldViewProj = world*view*proj;
-		
+		DirectX::XMMATRIX world = XMLoadFloat4x4(&mBoxWorld);
+		DirectX::XMMATRIX worldInvTranspose = MathHelper::InverseTranspose(world);
+		DirectX::XMMATRIX worldViewProj = world * view * proj;
+
 		Effects::BasicFX->SetWorld(world);
 		Effects::BasicFX->SetWorldInvTranspose(worldInvTranspose);
 		Effects::BasicFX->SetWorldViewProj(worldViewProj);
-		Effects::BasicFX->SetTexTransform(XMLoadFloat4x4(&mBoltTexTransform));
-		Effects::BasicFX->SetMaterial(mBoltMat);
-		Effects::BasicFX->SetDiffuseMap(mBoltMapSRV[mBoltFrameIndex]);
+		Effects::BasicFX->SetTexTransform(DirectX::XMMatrixIdentity());
+		Effects::BasicFX->SetMaterial(mBoxMat);
+		Effects::BasicFX->SetDiffuseMap(mAnimatedElectricBolts[mFrameIndex]);
+
 
 		md3dImmediateContext->RSSetState(RenderStates::NoCullRS);
 		md3dImmediateContext->OMSetBlendState(RenderStates::AdditiveBS, blendFactor, 0xffffffff);
 		md3dImmediateContext->OMSetDepthStencilState(RenderStates::DepthWriteOffDSS, 0);
-		boltTech->GetPassByIndex(p)->Apply(0, md3dImmediateContext);
-		md3dImmediateContext->DrawIndexed(mBoltIndexCount, 0, 0);
+		boxTech->GetPassByIndex(p)->Apply(0, md3dImmediateContext);
+		md3dImmediateContext->DrawIndexed(mCylinderIndexCount, 0, 0);
 
 		// Restore default render state.
 		md3dImmediateContext->RSSetState(0);
 		md3dImmediateContext->OMSetBlendState(0, blendFactor, 0xffffffff);
 		md3dImmediateContext->OMSetDepthStencilState(0, 0);
 	}
-	
 
 	HR(mSwapChain->Present(0, 0));
 }
@@ -505,8 +485,8 @@ void BlendApp::OnMouseMove(WPARAM btnState, int x, int y)
 	if( (btnState & MK_LBUTTON) != 0 )
 	{
 		// Make each pixel correspond to a quarter of a degree.
-		float dx = XMConvertToRadians(0.25f*static_cast<float>(x - mLastMousePos.x));
-		float dy = XMConvertToRadians(0.25f*static_cast<float>(y - mLastMousePos.y));
+		float dx = DirectX::XMConvertToRadians(0.25f*static_cast<float>(x - mLastMousePos.x));
+		float dy = DirectX::XMConvertToRadians(0.25f*static_cast<float>(y - mLastMousePos.y));
 
 		// Update angles based on input to orbit camera around box.
 		mTheta += dx;
@@ -537,15 +517,15 @@ float BlendApp::GetHillHeight(float x, float z)const
 	return 0.3f*( z*sinf(0.1f*x) + x*cosf(0.1f*z) );
 }
 
-XMFLOAT3 BlendApp::GetHillNormal(float x, float z)const
+DirectX::XMFLOAT3 BlendApp::GetHillNormal(float x, float z)const
 {
 	// n = (-df/dx, 1, -df/dz)
-	XMFLOAT3 n(
+	DirectX::XMFLOAT3 n(
 		-0.03f*z*cosf(0.1f*x) - 0.3f*cosf(0.1f*z),
 		1.0f,
 		-0.3f*sinf(0.1f*x) + 0.03f*x*sinf(0.1f*z));
 	
-	XMVECTOR unitNormal = XMVector3Normalize(XMLoadFloat3(&n));
+	DirectX::XMVECTOR unitNormal = DirectX::XMVector3Normalize(XMLoadFloat3(&n));
 	XMStoreFloat3(&n, unitNormal);
 
 	return n;
@@ -569,7 +549,7 @@ void BlendApp::BuildLandGeometryBuffers()
 	std::vector<Vertex::Basic32> vertices(grid.Vertices.size());
 	for(UINT i = 0; i < grid.Vertices.size(); ++i)
 	{
-		XMFLOAT3 p = grid.Vertices[i].Position;
+		DirectX::XMFLOAT3 p = grid.Vertices[i].Position;
 
 		p.y = GetHillHeight(p.x, p.z);
 		
@@ -653,64 +633,50 @@ void BlendApp::BuildWaveGeometryBuffers()
     HR(md3dDevice->CreateBuffer(&ibd, &iinitData, &mWavesIB));
 }
 
-void BlendApp::BuildBoltGeometryBuffers(float radius, float length)
+void BlendApp::BuildCrateGeometryBuffers()
 {
-	// Make a cylinder with one stack and no end-caps.
+	GeometryGenerator::MeshData box;
 
-	const UINT numSlices = 32;
+	GeometryGenerator geoGen;
+	geoGen.CreateCylinder(1.0f, 1.0f, 1.0f, 20, 20, box);
 
-	const UINT numCircleVerts = 33;
-	const UINT vertexCount = 2*numCircleVerts;
+	mCylinderIndexCount = box.Indices.size();
 
-	float dTheta = 2.0f*XM_PI/numSlices;
+	//
+	// Extract the vertex elements we are interested in and pack the
+	// vertices of all the meshes into one vertex buffer.
+	//
 
-	Vertex::Basic32 vertices[vertexCount];
+	std::vector<Vertex::Basic32> vertices(box.Vertices.size());
 
-	for(UINT i = 0; i < numCircleVerts; ++i)
+	for(UINT i = 0; i < box.Vertices.size(); ++i)
 	{
-		float x = radius*cosf(i*dTheta);
-		float z = radius*sinf(i*dTheta);
-
-		vertices[i].Pos    = XMFLOAT3(x, 0.0f, z);
-		vertices[i].Normal = XMFLOAT3(x, 0.0f, z);
-		vertices[i].Tex    = XMFLOAT2(i*dTheta/(2.0f*XM_PI), 0.95f);
-
-		vertices[i+numCircleVerts].Pos    = XMFLOAT3(x, length, z);
-		vertices[i+numCircleVerts].Normal = XMFLOAT3(x, 0.0f, z);
-		vertices[i+numCircleVerts].Tex    = XMFLOAT2(i*dTheta/(2.0f*XM_PI), 0.05f);
+		vertices[i].Pos    = box.Vertices[i].Position;
+		vertices[i].Normal = box.Vertices[i].Normal;
+		vertices[i].Tex    = box.Vertices[i].TexC;
 	}
 
     D3D11_BUFFER_DESC vbd;
     vbd.Usage = D3D11_USAGE_IMMUTABLE;
-    vbd.ByteWidth = sizeof(Vertex::Basic32) * vertexCount;
+    vbd.ByteWidth = sizeof(Vertex::Basic32) * box.Vertices.size();
     vbd.BindFlags = D3D11_BIND_VERTEX_BUFFER;
     vbd.CPUAccessFlags = 0;
     vbd.MiscFlags = 0;
     D3D11_SUBRESOURCE_DATA vinitData;
-    vinitData.pSysMem = vertices;
-    HR(md3dDevice->CreateBuffer(&vbd, &vinitData, &mBoltCylinderVB));
+    vinitData.pSysMem = &vertices[0];
+    HR(md3dDevice->CreateBuffer(&vbd, &vinitData, &mBoxVB));
 
-	mBoltIndexCount = numSlices*6;
-	USHORT indices[numSlices*6]; // 6 indices per quad
-
-	for(UINT i = 0; i < numSlices; ++i)
-	{
-		indices[i*6+0] = i;
-		indices[i*6+1] = numCircleVerts+i;
-		indices[i*6+2] = numCircleVerts+i+1;
-
-		indices[i*6+3] = i;
-		indices[i*6+4] = numCircleVerts+i+1;
-		indices[i*6+5] = i+1;
-	}
+	//
+	// Pack the indices of all the meshes into one index buffer.
+	//
 
 	D3D11_BUFFER_DESC ibd;
     ibd.Usage = D3D11_USAGE_IMMUTABLE;
-	ibd.ByteWidth = sizeof(USHORT) * mBoltIndexCount;
+	ibd.ByteWidth = sizeof(UINT) * box.Indices.size();
     ibd.BindFlags = D3D11_BIND_INDEX_BUFFER;
     ibd.CPUAccessFlags = 0;
     ibd.MiscFlags = 0;
     D3D11_SUBRESOURCE_DATA iinitData;
-    iinitData.pSysMem = indices;
-    HR(md3dDevice->CreateBuffer(&ibd, &iinitData, &mBoltCylinderIB));
+    iinitData.pSysMem = &box.Indices[0];
+    HR(md3dDevice->CreateBuffer(&ibd, &iinitData, &mBoxIB));
 }
