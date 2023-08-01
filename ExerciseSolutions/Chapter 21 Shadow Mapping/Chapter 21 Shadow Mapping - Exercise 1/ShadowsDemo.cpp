@@ -484,10 +484,12 @@ void ShadowsApp::DrawScene()
 			Effects::NormalMapFX->SetWorldInvTranspose(worldInvTranspose);
 			Effects::NormalMapFX->SetWorldViewProj(worldViewProj);
 			Effects::NormalMapFX->SetShadowTransform(world*shadowTransform);
+			Effects::NormalMapFX->SetProjectorTransform(world * projectorTransform);
 			Effects::NormalMapFX->SetTexTransform(XMMatrixScaling(8.0f, 10.0f, 1.0f));
 			Effects::NormalMapFX->SetMaterial(mGridMat);
 			Effects::NormalMapFX->SetDiffuseMap(mStoneTexSRV);
 			Effects::NormalMapFX->SetNormalMap(mStoneNormalTexSRV);
+			Effects::NormalMapFX->SetProjectorMap(mWoodCrateTexSRV);
 			break;
 		case RenderOptionsDisplacementMap:
 			Effects::DisplacementMapFX->SetWorld(world);
@@ -498,10 +500,12 @@ void ShadowsApp::DrawScene()
 			// Note: No world pre-multiply for displacement mapping since the DS computes the world
 			// space position, we just need the light view/proj.
 			Effects::DisplacementMapFX->SetShadowTransform(shadowTransform);
+			Effects::DisplacementMapFX->SetProjectorTransform(projectorTransform);
 			Effects::DisplacementMapFX->SetTexTransform(XMMatrixScaling(8.0f, 10.0f, 1.0f));
 			Effects::DisplacementMapFX->SetMaterial(mGridMat);
 			Effects::DisplacementMapFX->SetDiffuseMap(mStoneTexSRV);
 			Effects::DisplacementMapFX->SetNormalMap(mStoneNormalTexSRV);
+			Effects::DisplacementMapFX->SetProjectorMap(mWoodCrateTexSRV);
 			break;
 		}
 
@@ -530,6 +534,7 @@ void ShadowsApp::DrawScene()
 			Effects::NormalMapFX->SetWorldInvTranspose(worldInvTranspose);
 			Effects::NormalMapFX->SetWorldViewProj(worldViewProj);
 			Effects::NormalMapFX->SetShadowTransform(world*shadowTransform);
+			Effects::NormalMapFX->SetProjectorTransform(world* projectorTransform);
 			Effects::NormalMapFX->SetTexTransform(XMMatrixScaling(2.0f, 1.0f, 1.0f));
 			Effects::NormalMapFX->SetMaterial(mBoxMat);
 			Effects::NormalMapFX->SetDiffuseMap(mBrickTexSRV);
@@ -544,6 +549,7 @@ void ShadowsApp::DrawScene()
 			// Note: No world pre-multiply for displacement mapping since the DS computes the world
 			// space position, we just need the light view/proj.
 			Effects::DisplacementMapFX->SetShadowTransform(shadowTransform);
+			Effects::DisplacementMapFX->SetProjectorTransform(projectorTransform);
 			Effects::DisplacementMapFX->SetTexTransform(XMMatrixScaling(2.0f, 1.0f, 1.0f));
 			Effects::DisplacementMapFX->SetMaterial(mBoxMat);
 			Effects::DisplacementMapFX->SetDiffuseMap(mBrickTexSRV);
@@ -578,6 +584,7 @@ void ShadowsApp::DrawScene()
 				Effects::NormalMapFX->SetWorldInvTranspose(worldInvTranspose);
 				Effects::NormalMapFX->SetWorldViewProj(worldViewProj);
 				Effects::NormalMapFX->SetShadowTransform(world*shadowTransform);
+				Effects::NormalMapFX->SetProjectorTransform(world* projectorTransform);
 				Effects::NormalMapFX->SetTexTransform(XMMatrixScaling(1.0f, 2.0f, 1.0f));
 				Effects::NormalMapFX->SetMaterial(mCylinderMat);
 				Effects::NormalMapFX->SetDiffuseMap(mBrickTexSRV);
@@ -592,6 +599,7 @@ void ShadowsApp::DrawScene()
 				// Note: No world pre-multiply for displacement mapping since the DS computes the world
 				// space position, we just need the light view/proj.
 				Effects::DisplacementMapFX->SetShadowTransform(shadowTransform);
+				Effects::DisplacementMapFX->SetProjectorTransform(projectorTransform);
 				Effects::DisplacementMapFX->SetTexTransform(XMMatrixScaling(1.0f, 2.0f, 1.0f));
 				Effects::DisplacementMapFX->SetMaterial(mCylinderMat);
 				Effects::DisplacementMapFX->SetDiffuseMap(mBrickTexSRV);

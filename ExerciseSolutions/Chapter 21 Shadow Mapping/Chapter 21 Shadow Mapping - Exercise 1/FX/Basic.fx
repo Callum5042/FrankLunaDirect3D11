@@ -93,7 +93,7 @@ VertexOut VS(VertexIn vin)
 	// Generate projective tex-coords to project shadow map onto scene.
 	vout.ShadowPosH = mul(float4(vin.PosL, 1.0f), gShadowTransform);
     
-    
+    // Generate projective tex-coords for projector texture
     vout.ProjectorPosH = mul(float4(vin.PosL, 1.0f), gProjectorTransform);
 
 	return vout;

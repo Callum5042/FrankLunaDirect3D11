@@ -27,7 +27,8 @@ cbuffer cbPerObject
 	float4x4 gViewProj;
 	float4x4 gWorldViewProj;
 	float4x4 gTexTransform;
-	float4x4 gShadowTransform; 
+    float4x4 gShadowTransform;
+    float4x4 gProjectorTransform;
 	Material gMaterial;
 }; 
 
@@ -35,6 +36,8 @@ cbuffer cbPerObject
 Texture2D gShadowMap;
 Texture2D gDiffuseMap;
 Texture2D gNormalMap;
+Texture2D gProjectorMap;
+
 TextureCube gCubeMap;
 
 SamplerState samLinear
@@ -42,6 +45,13 @@ SamplerState samLinear
 	Filter = MIN_MAG_MIP_LINEAR;
 	AddressU = WRAP;
 	AddressV = WRAP;
+};
+
+SamplerState samProjectorLinear
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = BORDER;
+    AddressV = BORDER;
 };
 
 SamplerComparisonState samShadow
@@ -157,7 +167,8 @@ struct DomainOut
     float3 NormalW    : NORMAL;
 	float3 TangentW   : TANGENT;
 	float2 Tex        : TEXCOORD0;
-	float4 ShadowPosH : TEXCOORD1;
+    float4 ShadowPosH : TEXCOORD1;
+    float4 ProjectorPosH : TEXCOORD2;
 };
 
 // The domain shader is called for every vertex created by the tessellator.  
@@ -198,6 +209,9 @@ DomainOut DS(PatchTess patchTess,
 	
 	// Project to homogeneous clip space.
 	dout.PosH = mul(float4(dout.PosW, 1.0f), gViewProj);
+    
+    // Generate projective tex-coords for projector texture
+    dout.ProjectorPosH = mul(float4(dout.PosW, 1.0f), gProjectorTransform);
 	
 	return dout;
 }
@@ -237,6 +251,11 @@ float4 PS(DomainOut pin,
 		}
 	}
 
+    // Projector
+    pin.ProjectorPosH.xyz /= pin.ProjectorPosH.w;
+    float depth = pin.ProjectorPosH.z;
+    texColor += gProjectorMap.Sample(samProjectorLinear, pin.ProjectorPosH.xy);
+    
 	//
 	// Normal mapping
 	//

@@ -175,6 +175,7 @@ NormalMapEffect::NormalMapEffect(ID3D11Device* device, const std::wstring& filen
 	World             = mFX->GetVariableByName("gWorld")->AsMatrix();
 	WorldInvTranspose = mFX->GetVariableByName("gWorldInvTranspose")->AsMatrix();
 	ShadowTransform   = mFX->GetVariableByName("gShadowTransform")->AsMatrix();
+	ProjectorTransform = mFX->GetVariableByName("gProjectorTransform")->AsMatrix();
 	TexTransform      = mFX->GetVariableByName("gTexTransform")->AsMatrix();
 	EyePosW           = mFX->GetVariableByName("gEyePosW")->AsVector();
 	FogColor          = mFX->GetVariableByName("gFogColor")->AsVector();
@@ -186,6 +187,7 @@ NormalMapEffect::NormalMapEffect(ID3D11Device* device, const std::wstring& filen
 	CubeMap           = mFX->GetVariableByName("gCubeMap")->AsShaderResource();
 	NormalMap         = mFX->GetVariableByName("gNormalMap")->AsShaderResource();
 	ShadowMap         = mFX->GetVariableByName("gShadowMap")->AsShaderResource();
+	ProjectorMap = mFX->GetVariableByName("gProjectorMap")->AsShaderResource();
 }
 
 NormalMapEffect::~NormalMapEffect()
@@ -258,6 +260,7 @@ DisplacementMapEffect::DisplacementMapEffect(ID3D11Device* device, const std::ws
 	World             = mFX->GetVariableByName("gWorld")->AsMatrix();
 	WorldInvTranspose = mFX->GetVariableByName("gWorldInvTranspose")->AsMatrix();
 	ShadowTransform   = mFX->GetVariableByName("gShadowTransform")->AsMatrix();
+	ProjectorTransform = mFX->GetVariableByName("gProjectorTransform")->AsMatrix();
 	TexTransform      = mFX->GetVariableByName("gTexTransform")->AsMatrix();
 	EyePosW           = mFX->GetVariableByName("gEyePosW")->AsVector();
 	FogColor          = mFX->GetVariableByName("gFogColor")->AsVector();
@@ -274,6 +277,7 @@ DisplacementMapEffect::DisplacementMapEffect(ID3D11Device* device, const std::ws
 	CubeMap           = mFX->GetVariableByName("gCubeMap")->AsShaderResource();
 	NormalMap         = mFX->GetVariableByName("gNormalMap")->AsShaderResource();
 	ShadowMap         = mFX->GetVariableByName("gShadowMap")->AsShaderResource();
+	ProjectorMap = mFX->GetVariableByName("gProjectorMap")->AsShaderResource();
 }
 
 DisplacementMapEffect::~DisplacementMapEffect()

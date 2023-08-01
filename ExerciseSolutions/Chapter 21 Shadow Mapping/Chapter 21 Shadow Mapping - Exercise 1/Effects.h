@@ -138,6 +138,7 @@ public:
 	void SetWorldInvTranspose(DirectX::CXMMATRIX M)              { WorldInvTranspose->SetMatrix(reinterpret_cast<const float*>(&M)); }
 	void SetShadowTransform(DirectX::CXMMATRIX M)                { ShadowTransform->SetMatrix(reinterpret_cast<const float*>(&M)); }
 	void SetTexTransform(DirectX::CXMMATRIX M)                   { TexTransform->SetMatrix(reinterpret_cast<const float*>(&M)); }
+	void SetProjectorTransform(DirectX::CXMMATRIX M)			 { ProjectorTransform->SetMatrix(reinterpret_cast<const float*>(&M)); }
 	void SetEyePosW(const DirectX::XMFLOAT3& v)                  { EyePosW->SetRawValue(&v, 0, sizeof(DirectX::XMFLOAT3)); }
 	void SetFogColor(const DirectX::FXMVECTOR v)                 { FogColor->SetFloatVector(reinterpret_cast<const float*>(&v)); }
 	void SetFogStart(float f)                           { FogStart->SetFloat(f); }
@@ -148,6 +149,7 @@ public:
 	void SetCubeMap(ID3D11ShaderResourceView* tex)      { CubeMap->SetResource(tex); }
 	void SetNormalMap(ID3D11ShaderResourceView* tex)    { NormalMap->SetResource(tex); }
 	void SetShadowMap(ID3D11ShaderResourceView* tex)    { ShadowMap->SetResource(tex); }
+	void SetProjectorMap(ID3D11ShaderResourceView* tex) { ProjectorMap->SetResource(tex); }
 
 	ID3DX11EffectTechnique* Light1Tech;
 	ID3DX11EffectTechnique* Light2Tech;
@@ -210,6 +212,7 @@ public:
 	ID3DX11EffectMatrixVariable* WorldInvTranspose;
 	ID3DX11EffectMatrixVariable* ShadowTransform;
 	ID3DX11EffectMatrixVariable* TexTransform;
+	ID3DX11EffectMatrixVariable* ProjectorTransform;
 	ID3DX11EffectVectorVariable* EyePosW;
 	ID3DX11EffectVectorVariable* FogColor;
 	ID3DX11EffectScalarVariable* FogStart;
@@ -221,6 +224,7 @@ public:
 	ID3DX11EffectShaderResourceVariable* CubeMap;
 	ID3DX11EffectShaderResourceVariable* NormalMap;
 	ID3DX11EffectShaderResourceVariable* ShadowMap;
+	ID3DX11EffectShaderResourceVariable* ProjectorMap;
 };
 #pragma endregion
 
@@ -237,6 +241,7 @@ public:
 	void SetWorldInvTranspose(DirectX::CXMMATRIX M)              { WorldInvTranspose->SetMatrix(reinterpret_cast<const float*>(&M)); }
 	void SetShadowTransform(DirectX::CXMMATRIX M)                { ShadowTransform->SetMatrix(reinterpret_cast<const float*>(&M)); }
 	void SetTexTransform(DirectX::CXMMATRIX M)                   { TexTransform->SetMatrix(reinterpret_cast<const float*>(&M)); }
+	void SetProjectorTransform(DirectX::CXMMATRIX M)			 { ProjectorTransform->SetMatrix(reinterpret_cast<const float*>(&M)); }
 	void SetEyePosW(const DirectX::XMFLOAT3& v)                  { EyePosW->SetRawValue(&v, 0, sizeof(DirectX::XMFLOAT3)); }
 	void SetFogColor(const DirectX::FXMVECTOR v)                 { FogColor->SetFloatVector(reinterpret_cast<const float*>(&v)); }
 	void SetFogStart(float f)                           { FogStart->SetFloat(f); }
@@ -253,6 +258,7 @@ public:
 	void SetCubeMap(ID3D11ShaderResourceView* tex)      { CubeMap->SetResource(tex); }
 	void SetNormalMap(ID3D11ShaderResourceView* tex)    { NormalMap->SetResource(tex); }
 	void SetShadowMap(ID3D11ShaderResourceView* tex)    { ShadowMap->SetResource(tex); }
+	void SetProjectorMap(ID3D11ShaderResourceView* tex) { ProjectorMap->SetResource(tex); }
 
 	ID3DX11EffectTechnique* Light1Tech;
 	ID3DX11EffectTechnique* Light2Tech;
@@ -316,6 +322,7 @@ public:
 	ID3DX11EffectMatrixVariable* WorldInvTranspose;
 	ID3DX11EffectMatrixVariable* ShadowTransform;
 	ID3DX11EffectMatrixVariable* TexTransform;
+	ID3DX11EffectMatrixVariable* ProjectorTransform;
 	ID3DX11EffectVectorVariable* EyePosW;
 	ID3DX11EffectVectorVariable* FogColor;
 	ID3DX11EffectScalarVariable* FogStart;
@@ -332,6 +339,7 @@ public:
 	ID3DX11EffectShaderResourceVariable* CubeMap;
 	ID3DX11EffectShaderResourceVariable* NormalMap;
 	ID3DX11EffectShaderResourceVariable* ShadowMap;
+	ID3DX11EffectShaderResourceVariable* ProjectorMap;
 };
 #pragma endregion
 

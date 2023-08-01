@@ -20,7 +20,8 @@ cbuffer cbPerObject
 	float4x4 gWorldInvTranspose;
 	float4x4 gWorldViewProj;
 	float4x4 gTexTransform;
-	float4x4 gShadowTransform; 
+    float4x4 gShadowTransform;
+    float4x4 gProjectorTransform;
 	Material gMaterial;
 }; 
 
@@ -28,6 +29,7 @@ cbuffer cbPerObject
 Texture2D gShadowMap;
 Texture2D gDiffuseMap;
 Texture2D gNormalMap;
+Texture2D gProjectorMap;
 
 TextureCube gCubeMap;
 
@@ -36,6 +38,13 @@ SamplerState samLinear
 	Filter = MIN_MAG_MIP_LINEAR;
 	AddressU = WRAP;
 	AddressV = WRAP;
+};
+
+SamplerState samProjectorLinear
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = BORDER;
+    AddressV = BORDER;
 };
 
 SamplerComparisonState samShadow
@@ -64,7 +73,8 @@ struct VertexOut
     float3 NormalW    : NORMAL;
 	float3 TangentW   : TANGENT;
 	float2 Tex        : TEXCOORD0;
-	float4 ShadowPosH : TEXCOORD1;
+    float4 ShadowPosH : TEXCOORD1;
+    float4 ProjectorPosH : TEXCOORD2;
 };
 
 VertexOut VS(VertexIn vin)
@@ -83,7 +93,10 @@ VertexOut VS(VertexIn vin)
 	vout.Tex = mul(float4(vin.Tex, 0.0f, 1.0f), gTexTransform).xy;
 
 	// Generate projective tex-coords to project shadow map onto scene.
-	vout.ShadowPosH = mul(float4(vin.PosL, 1.0f), gShadowTransform);
+    vout.ShadowPosH = mul(float4(vin.PosL, 1.0f), gShadowTransform); 
+    
+    // Generate projective tex-coords for projector texture
+    vout.ProjectorPosH = mul(float4(vin.PosL, 1.0f), gProjectorTransform);
 
 	return vout;
 }
@@ -123,6 +136,11 @@ float4 PS(VertexOut pin,
 		}
 	}
 
+    // Projector
+    pin.ProjectorPosH.xyz /= pin.ProjectorPosH.w;
+    float depth = pin.ProjectorPosH.z;
+    texColor += gProjectorMap.Sample(samProjectorLinear, pin.ProjectorPosH.xy);
+    
 	//
 	// Normal mapping
 	//
