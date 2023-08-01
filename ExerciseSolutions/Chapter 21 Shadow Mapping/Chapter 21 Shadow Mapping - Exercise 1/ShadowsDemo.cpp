@@ -80,6 +80,7 @@ private:
 
 	ID3D11ShaderResourceView* mStoneTexSRV;
 	ID3D11ShaderResourceView* mBrickTexSRV;
+	ID3D11ShaderResourceView* mWoodCrateTexSRV;
 
 	ID3D11ShaderResourceView* mStoneNormalTexSRV;
 	ID3D11ShaderResourceView* mBrickNormalTexSRV;
@@ -91,6 +92,7 @@ private:
 	XMFLOAT4X4 mLightView;
 	XMFLOAT4X4 mLightProj;
 	XMFLOAT4X4 mShadowTransform;
+	XMFLOAT4X4 mProjectorTransform;
 
 	float mLightRotationAngle;
 	XMFLOAT3 mOriginalLightDir[3];
@@ -290,6 +292,9 @@ bool ShadowsApp::Init()
 	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/bricks_nmap.dds", &texResource, &mBrickNormalTexSRV));
 	ReleaseCOM(texResource); // view saves reference
 
+	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/WoodCrate01.dds", &texResource, &mWoodCrateTexSRV));
+	ReleaseCOM(texResource); // view saves reference
+
 
 	BuildShapeGeometryBuffers();
 	BuildSkullGeometryBuffers();
@@ -351,6 +356,15 @@ void ShadowsApp::UpdateScene(float dt)
 	BuildShadowTransform();
 
 	mCam.UpdateViewMatrix();
+
+
+	// Projector camera
+	XMMATRIX projectorView = XMMatrixLookAtLH(XMVectorSet(-4.0f, 5.0f, -4.0f, 1.0f), XMVectorSet(-4.0f, 0.0f, 2.0f, 1.0f), XMVectorSet(0.0f, 1.0f, 0.0f, 1.0f));
+	XMMATRIX projectorProjection = XMMatrixOrthographicLH(10.0f, 10.0, 0.0f, 1.0f);
+
+	XMMATRIX projectorTransform = projectorView * projectorProjection;
+
+	XMStoreFloat4x4(&mProjectorTransform, projectorTransform);
 }
 
 void ShadowsApp::DrawScene()
@@ -427,6 +441,7 @@ void ShadowsApp::DrawScene()
 	XMMATRIX worldViewProj;
 
 	XMMATRIX shadowTransform = XMLoadFloat4x4(&mShadowTransform);
+	XMMATRIX projectorTransform = XMLoadFloat4x4(&mProjectorTransform);
 
 	//
 	// Draw the grid, cylinders, and box without any cubemap reflection.
@@ -458,11 +473,11 @@ void ShadowsApp::DrawScene()
 			Effects::BasicFX->SetWorldInvTranspose(worldInvTranspose);
 			Effects::BasicFX->SetWorldViewProj(worldViewProj);
 			Effects::BasicFX->SetShadowTransform(world*shadowTransform);
-			Effects::BasicFX->SetProjectorTransform(DirectX::XMMatrixIdentity());
+			Effects::BasicFX->SetProjectorTransform(world*projectorTransform);
 			Effects::BasicFX->SetTexTransform(XMMatrixScaling(8.0f, 10.0f, 1.0f));
 			Effects::BasicFX->SetMaterial(mGridMat);
 			Effects::BasicFX->SetDiffuseMap(mStoneTexSRV);
-			Effects::BasicFX->SetProjectorMap(mStoneTexSRV);
+			Effects::BasicFX->SetProjectorMap(mWoodCrateTexSRV);
 			break;
 		case RenderOptionsNormalMap:
 			Effects::NormalMapFX->SetWorld(world);
@@ -505,6 +520,7 @@ void ShadowsApp::DrawScene()
 			Effects::BasicFX->SetWorldInvTranspose(worldInvTranspose);
 			Effects::BasicFX->SetWorldViewProj(worldViewProj);
 			Effects::BasicFX->SetShadowTransform(world*shadowTransform);
+			Effects::BasicFX->SetProjectorTransform(world * projectorTransform);
 			Effects::BasicFX->SetTexTransform(XMMatrixScaling(2.0f, 1.0f, 1.0f));
 			Effects::BasicFX->SetMaterial(mBoxMat);
 			Effects::BasicFX->SetDiffuseMap(mBrickTexSRV);
@@ -552,6 +568,7 @@ void ShadowsApp::DrawScene()
 				Effects::BasicFX->SetWorldInvTranspose(worldInvTranspose);
 				Effects::BasicFX->SetWorldViewProj(worldViewProj);
 				Effects::BasicFX->SetShadowTransform(world*shadowTransform);
+				Effects::BasicFX->SetProjectorTransform(world* projectorTransform);
 				Effects::BasicFX->SetTexTransform(XMMatrixScaling(1.0f, 2.0f, 1.0f));
 				Effects::BasicFX->SetMaterial(mCylinderMat);
 				Effects::BasicFX->SetDiffuseMap(mBrickTexSRV);
@@ -613,6 +630,7 @@ void ShadowsApp::DrawScene()
 			Effects::BasicFX->SetWorldInvTranspose(worldInvTranspose);
 			Effects::BasicFX->SetWorldViewProj(worldViewProj);
 			Effects::BasicFX->SetShadowTransform(world*shadowTransform);
+			Effects::BasicFX->SetProjectorTransform(world* projectorTransform);
 			Effects::BasicFX->SetTexTransform(XMMatrixIdentity());
 			Effects::BasicFX->SetMaterial(mSphereMat);
 
@@ -643,6 +661,7 @@ void ShadowsApp::DrawScene()
 		Effects::BasicFX->SetWorldViewProj(worldViewProj);
 		Effects::BasicFX->SetMaterial(mSkullMat);
 		Effects::BasicFX->SetShadowTransform(world*shadowTransform);
+		Effects::BasicFX->SetProjectorTransform(world* projectorTransform);
 
 		activeSkullTech->GetPassByIndex(p)->Apply(0, md3dImmediateContext);
 		md3dImmediateContext->DrawIndexed(mSkullIndexCount, 0, 0);
