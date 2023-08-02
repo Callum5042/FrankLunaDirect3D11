@@ -254,7 +254,14 @@ float4 PS(DomainOut pin,
     // Projector
     pin.ProjectorPosH.xyz /= pin.ProjectorPosH.w;
     float depth = pin.ProjectorPosH.z;
-    texColor += gProjectorMap.Sample(samProjectorLinear, pin.ProjectorPosH.xy);
+    float4 projectorColor = gProjectorMap.Sample(samProjectorLinear, pin.ProjectorPosH.xy);
+
+    float4 projectorOutsideBorderColour = float4(0.0f, 0.0f, 0.0f, 0.0f);
+    if (pin.ProjectorPosH.x >= 0.0f && pin.ProjectorPosH.x <= 1.0f && pin.ProjectorPosH.y >= 0.0f && pin.ProjectorPosH.y <= 1.0f)
+    {
+        projectorOutsideBorderColour = float4(1.0f, 1.0f, 1.0f, 1.0f);
+        texColor = projectorColor;
+    }
     
 	//
 	// Normal mapping
@@ -291,6 +298,9 @@ float4 PS(DomainOut pin,
 			diffuse += shadow[i]*D;
 			spec    += shadow[i]*S;
 		}
+        
+        diffuse *= projectorOutsideBorderColour;
+        spec *= projectorOutsideBorderColour;
 
 		litColor = texColor*(ambient + diffuse) + spec;
 

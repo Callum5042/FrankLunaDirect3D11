@@ -142,10 +142,10 @@ float4 PS(VertexOut pin,
     float depth = pin.ProjectorPosH.z;
     float4 projectorColor = gProjectorMap.Sample(samProjectorLinear, pin.ProjectorPosH.xy);
 
-    //texColor += projectorColor;
-    
+    float4 projectorOutsideBorderColour = float4(0.0f, 0.0f, 0.0f, 0.0f);
     if (pin.ProjectorPosH.x >= 0.0f && pin.ProjectorPosH.x <= 1.0f && pin.ProjectorPosH.y >= 0.0f && pin.ProjectorPosH.y <= 1.0f)
     {
+        projectorOutsideBorderColour = float4(1.0f, 1.0f, 1.0f, 1.0f);
         texColor = projectorColor;
     }
     
@@ -184,6 +184,9 @@ float4 PS(VertexOut pin,
 			diffuse += shadow[i]*D;
 			spec    += shadow[i]*S;
 		}
+        
+        diffuse *= projectorOutsideBorderColour;
+        spec *= projectorOutsideBorderColour;
 		   
 		litColor = texColor*(ambient + diffuse) + spec;
 		  
@@ -208,7 +211,7 @@ float4 PS(VertexOut pin,
 		// Blend the fog color and the lit color.
 		litColor = lerp(litColor, gFogColor, fogLerp);
 	}
-
+    
 	// Common to take alpha from diffuse material and texture.
 	litColor.a = gMaterial.Diffuse.a * texColor.a;
 

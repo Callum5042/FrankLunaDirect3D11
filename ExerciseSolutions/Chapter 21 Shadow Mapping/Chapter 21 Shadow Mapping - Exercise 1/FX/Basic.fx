@@ -46,6 +46,7 @@ SamplerState samProjectorLinear
 	Filter = MIN_MAG_MIP_LINEAR;
 	AddressU = BORDER;
     AddressV = BORDER;
+    BorderColor = float4(1.0f, 1.0f, 1.0f, 1.0f);
 };
 
 SamplerComparisonState samShadow
@@ -138,11 +139,7 @@ float4 PS(VertexOut pin,
     pin.ProjectorPosH.xyz /= pin.ProjectorPosH.w;
     float depth = pin.ProjectorPosH.z;
     float4 projectorColor = gProjectorMap.Sample(samProjectorLinear, pin.ProjectorPosH.xy);
-
-    if (pin.ProjectorPosH.x >= 0.0f && pin.ProjectorPosH.x <= 1.0f && pin.ProjectorPosH.y >= 0.0f && pin.ProjectorPosH.y <= 1.0f)
-    {
-        texColor = projectorColor;
-    }
+    texColor *= projectorColor;
 	 
 	//
 	// Lighting.
