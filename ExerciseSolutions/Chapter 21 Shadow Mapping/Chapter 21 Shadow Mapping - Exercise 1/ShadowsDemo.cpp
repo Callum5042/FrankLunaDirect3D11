@@ -10,6 +10,10 @@
 //      Press '2' for BasicFX
 //      Press '3' for Normal mapping
 //      Press '4' for Displacement mapping
+// 
+// Exercise 1:
+//		Write a program that simulates a slide projector by projecting a texture onto
+//		the scene. Experiment with both perspective and orthographic projections.
 //
 //***************************************************************************************
 

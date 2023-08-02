@@ -52,6 +52,7 @@ SamplerState samProjectorLinear
     Filter = MIN_MAG_MIP_LINEAR;
     AddressU = BORDER;
     AddressV = BORDER;
+    BorderColor = float4(1.0f, 1.0f, 1.0f, 1.0f);
 };
 
 SamplerComparisonState samShadow
@@ -254,7 +255,8 @@ float4 PS(DomainOut pin,
     // Projector
     pin.ProjectorPosH.xyz /= pin.ProjectorPosH.w;
     float depth = pin.ProjectorPosH.z;
-    texColor += gProjectorMap.Sample(samProjectorLinear, pin.ProjectorPosH.xy);
+    float4 projectorColor = gProjectorMap.Sample(samProjectorLinear, pin.ProjectorPosH.xy);
+    texColor *= projectorColor;
     
 	//
 	// Normal mapping
