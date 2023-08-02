@@ -139,7 +139,12 @@ float4 PS(VertexOut pin,
     // Projector
     pin.ProjectorPosH.xyz /= pin.ProjectorPosH.w;
     float depth = pin.ProjectorPosH.z;
-    texColor += gProjectorMap.Sample(samProjectorLinear, pin.ProjectorPosH.xy);
+    float4 projectorColor = gProjectorMap.Sample(samProjectorLinear, pin.ProjectorPosH.xy);
+
+    if (pin.ProjectorPosH.x >= 0.0f && pin.ProjectorPosH.x <= 1.0f && pin.ProjectorPosH.y >= 0.0f && pin.ProjectorPosH.y <= 1.0f)
+    {
+        texColor = projectorColor;
+    }
     
 	//
 	// Normal mapping
